@@ -27,7 +27,7 @@ function LandingPage() {
         ].map((item, index) => (
           <p
             key={index}
-            className=" text-xl font-light tracking-tight leading-none"
+            className=" font-Founder text-xl font-light tracking-tight leading-none"
           >
             {item}
           </p>
