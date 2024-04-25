@@ -65,7 +65,7 @@ function Featured() {
               {item.tags.map((item, index) => (
                 <button
                   key={index}
-                  className=" text-white border-[2px] border-white px-3 uppercase py-1 rounded-2xl"
+                  className=" text-white border-[2px]  border-white px-3 uppercase py-1 rounded-2xl"
                 >
                   {item}
                 </button>
