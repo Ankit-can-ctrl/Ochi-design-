@@ -74,6 +74,27 @@ function Featured() {
           </div>
         ))}
       </div>
+      <div className="projects-btn w-full px-20 py-10 flex items-center justify-center">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          className=" bg-white text-black rounded-full text-xl font-Neue font-semibold flex items-center justify-center gap-4 capitalize border-[1px] px-6 py-4"
+        >
+          view all work
+          <span>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M6.5 4a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V4.5H7a.5.5 0 01-.5-.5z"></path>
+              <path d="M12.354 3.646a.5.5 0 010 .708l-9 9a.5.5 0 01-.708-.708l9-9a.5.5 0 01.708 0z"></path>
+            </svg>
+          </span>
+        </motion.button>
+      </div>
     </div>
   );
 }
