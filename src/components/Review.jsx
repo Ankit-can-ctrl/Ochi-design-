@@ -8,6 +8,12 @@ function Review() {
       </h1>
       <div className="review-section">
         <Reviewclient />
+        <Reviewclient />
+        <Reviewclient />
+        <Reviewclient />
+        <Reviewclient />
+        <Reviewclient />
+        <Reviewclient />
       </div>
     </div>
   );
