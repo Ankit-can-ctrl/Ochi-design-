@@ -5,6 +5,7 @@ import Featured from "./components/Featured";
 import LandingPage from "./components/LandingPage";
 import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
+import ReadyToStart from "./components/ReadyToStart";
 import Review from "./components/Review";
 
 import LocomotiveScroll from "locomotive-scroll";
@@ -21,6 +22,7 @@ function App() {
       <Featured />
       <Review />
       <Cards />
+      <ReadyToStart />
     </div>
   );
 }
