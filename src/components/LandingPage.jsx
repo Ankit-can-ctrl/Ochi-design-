@@ -1,5 +1,5 @@
 const mainHeadnig = ["We Create", "Eye Opening", "Presentations"];
-
+import { motion } from "framer-motion";
 function LandingPage() {
   return (
     <div className="w-full h-screen bg-zinc-900 pt-1">
@@ -9,7 +9,12 @@ function LandingPage() {
             <div key={index} className="masker">
               <div className="flex items-center justify-start">
                 {index === 1 && (
-                  <div className="h-[90px] w-[140px] rounded-lg relative top-2  bg-green-500"></div>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "140px" }}
+                    transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                    className="h-[90px] w-[140px] rounded-lg relative top-2  bg-green-500"
+                  ></motion.div>
                 )}
 
                 <h1 className=" text-[8rem] tracking-tighter font-semibold leading-[.95] uppercase font-Founder ">
