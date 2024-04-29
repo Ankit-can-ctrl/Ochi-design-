@@ -11,10 +11,14 @@ import Review from "./components/Review";
 
 import LocomotiveScroll from "locomotive-scroll";
 
+// ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
+
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
+  // ***using this here will smoothen the scroll of entire application
+
   return (
-    <div className="w-full min-h-screen text-white bg-zinc-900">
+    <div className="w-full h-fit text-white bg-zinc-900">
       <Navbar />
       <LandingPage />
       <Marquee />

@@ -2,7 +2,15 @@ const mainHeadnig = ["We Create", "Eye Opening", "Presentations"];
 import { motion } from "framer-motion";
 function LandingPage() {
   return (
-    <div className="w-full h-screen bg-zinc-900 pt-1">
+    <div
+      // data-scroll allows us to vary speed of scroll of the element
+      // data-scroll-section tells it is a different section
+      // data-scroll-speed tells the speed of scroll
+      data-scroll
+      data-scroll-section
+      data-scroll-speed="-.3"
+      className="w-full h-screen bg-zinc-900 pt-1"
+    >
       <div className="text-structure mt-52 px-20">
         {mainHeadnig.map((item, index) => {
           return (

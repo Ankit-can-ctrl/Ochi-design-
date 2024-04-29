@@ -1,6 +1,13 @@
+import playback from "../img/about.mp4";
+
 function About() {
   return (
-    <div className="w-full h-[100%] rounded-t-3xl text-black bg-[#CDEA68]">
+    <div
+      data-scroll
+      data-scroll-section
+      data-scroll-speed=".2"
+      className="w-full h-[100%] rounded-t-3xl text-black bg-[#CDEA68]"
+    >
       <div className="about-top">
         <h1 className="w-[80%]  font-Neue text-[3.5vw] tracking-tighter font-normal pt-24  px-20 text-left">
           Ochi is a strategic partner for fast-growing tech businesses that need
@@ -57,8 +64,10 @@ function About() {
             </svg>
           </div>
         </div>
-        <div className="about-bottom-right flex items-center justify-center">
-          <div className=" rounded-xl bg-red-600 h-[60vh] w-[40vw] "></div>
+        <div className="about-bottom-right px-10 flex items-center justify-center">
+          <video className=" rounded-xl" autoPlay loop muted playsInline>
+            <source src={playback} type="video/mp4" />
+          </video>
         </div>
       </div>
     </div>

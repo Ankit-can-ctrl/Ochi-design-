@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 const projectsArr = [
   {
     name: "fyde",
@@ -23,6 +24,7 @@ const projectsArr = [
 ];
 
 function Featured() {
+  const [isHovering, setIsHovering] = useState(false);
   return (
     <div className="w-full h-min py-20  bg-black">
       <div className="w-full  border-b-[.1px] border-zinc-600 pb-10">
@@ -50,16 +52,27 @@ function Featured() {
                 {item.name}
               </span>
             </div>
-            <div className="project-img px-10 h-[80%]">
+            <div
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
+              className="project-img  h-[80%] relative"
+            >
               <motion.img
                 whileHover={{
                   scale: 0.95,
                   transition: { duration: 0.5, ease: "easeInOut" },
                 }}
-                className="rounded-lg  flex items-center justify-center h-full w-full "
+                className="  rounded-lg  flex items-center justify-center h-full w-full "
                 src={item.img}
                 alt="project image"
               />
+              <motion.h1
+                initial={{ opacity: 0 }}
+                animate={isHovering ? { opacity: 1 } : { opacity: 0 }}
+                className="uppercase text-[#CDEA68] top-1/2 left-[18vw] text-6xl font-Founder font-bold tracking-tighter absolute z-10"
+              >
+                {item.name}
+              </motion.h1>
             </div>
             <div className="project-tags px-14 py-5 flex gap-4">
               {item.tags.map((item, index) => (
@@ -77,6 +90,7 @@ function Featured() {
       <div className="projects-btn w-full px-20 py-10 flex items-center justify-center">
         <motion.button
           whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3 }}
           className=" bg-white text-black rounded-full text-xl font-Neue font-semibold flex items-center justify-center gap-4 capitalize border-[1px] px-6 py-4"
         >
           view all work

@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 const navlinks = ["Services", "Our Work", "About Us", "Insights", "Contact Us"];
 function Navbar() {
   return (
-    <div className="fixed z-[999] w-full px-20 py-10 font-Neue flex item-center justify-between">
+    <motion.div className="fixed z-[999] w-full px-20 py-10 font-Neue flex item-center justify-between">
       <div className="logo cursor-pointer">
         <svg
           width="72"
@@ -44,7 +45,7 @@ function Navbar() {
           </a>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
