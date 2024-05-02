@@ -8,6 +8,7 @@ import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
 import ReadyToStart from "./components/ReadyToStart";
 import Review from "./components/Review";
+import NavMenu from "./components/Newcomponents/NavMenu";
 
 import LocomotiveScroll from "locomotive-scroll";
 
@@ -18,8 +19,13 @@ function App() {
   // ***using this here will smoothen the scroll of entire application
 
   return (
-    <div className="w-full h-fit text-white bg-zinc-900">
-      <Navbar />
+    <div
+      data-scroll
+      data-scroll-section
+      className="w-full text-white bg-zinc-900"
+    >
+      <NavMenu />
+      {/* <Navbar />
       <LandingPage />
       <Marquee />
       <About />
@@ -28,7 +34,7 @@ function App() {
       <Review />
       <Cards />
       <ReadyToStart />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

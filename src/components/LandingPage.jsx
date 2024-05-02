@@ -7,7 +7,6 @@ function LandingPage() {
       // data-scroll-section tells it is a different section
       // data-scroll-speed tells the speed of scroll
       data-scroll
-      data-scroll-section
       data-scroll-speed="-.3"
       className="w-full h-screen bg-zinc-900 pt-1"
     >

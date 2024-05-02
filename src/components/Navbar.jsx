@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 const navlinks = ["Services", "Our Work", "About Us", "Insights", "Contact Us"];
 function Navbar() {
   return (
-    <motion.div className="fixed z-[999] w-full px-20 py-10 font-Neue flex item-center justify-between">
+    <motion.div
+      animate={{ height: 0 }}
+      transition={{ duration: 1 }}
+      className="z-[999] w-full px-20 py-10 font-Neue flex item-center justify-between"
+    >
       <div className="logo cursor-pointer">
         <svg
           width="72"
@@ -33,7 +37,19 @@ function Navbar() {
           ></path>
         </svg>
       </div>
-      <div className="links flex gap-10">
+      <div className="nav-menu xl:hidden  text-2xl cursor-pointer">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          viewBox="0 0 1024 1024"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path>
+        </svg>
+      </div>
+      <div className="links xl:flex md:hidden gap-10 ">
         {navlinks.map((item, index) => (
           <a
             key={index}

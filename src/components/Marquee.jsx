@@ -3,7 +3,6 @@ function Marquee() {
   return (
     <div
       data-scroll
-      data-scroll-section
       data-scroll-speed=".2"
       className="w-full py-[5vh] rounded-3xl bg-[#004D43]"
     >

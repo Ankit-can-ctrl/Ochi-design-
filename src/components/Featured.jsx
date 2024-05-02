@@ -69,7 +69,8 @@ function Featured() {
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={isHovering ? { opacity: 1 } : { opacity: 0 }}
-                className="uppercase text-[#CDEA68] top-1/2 left-[18vw] text-6xl font-Founder font-bold tracking-tighter absolute z-10"
+                transition={{ duration: 1 }}
+                className="uppercase text-[#CDEA68] top-1/2 left-[16vw] text-8xl font-Founder font-bold tracking-tighter absolute z-10"
               >
                 {item.name}
               </motion.h1>
