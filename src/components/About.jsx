@@ -3,9 +3,9 @@ import playback from "../img/about.mp4";
 function About() {
   return (
     <div
-      data-scroll
-      data-scroll-section
-      data-scroll-speed=".2"
+      // data-scroll
+      // data-scroll-section
+      // data-scroll-speed=".2"
       className="w-full h-[100%] rounded-t-3xl text-black bg-[#CDEA68]"
     >
       <div className="about-top">

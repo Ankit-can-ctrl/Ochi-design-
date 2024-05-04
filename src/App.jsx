@@ -11,6 +11,7 @@ import Review from "./components/Review";
 import NavMenu from "./components/Newcomponents/NavMenu";
 
 import LocomotiveScroll from "locomotive-scroll";
+import NewNavbar from "./components/Newcomponents/NewNavbar";
 
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
@@ -19,13 +20,10 @@ function App() {
   // ***using this here will smoothen the scroll of entire application
 
   return (
-    <div
-      data-scroll
-      data-scroll-section
-      className="w-full text-white bg-zinc-900"
-    >
-      <NavMenu />
+    <div className="w-full text-white bg-zinc-900">
       {/* <Navbar />
+      <NavMenu /> */}
+      <NewNavbar />
       <LandingPage />
       <Marquee />
       <About />
@@ -34,7 +32,7 @@ function App() {
       <Review />
       <Cards />
       <ReadyToStart />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -6,8 +6,8 @@ function LandingPage() {
       // data-scroll allows us to vary speed of scroll of the element
       // data-scroll-section tells it is a different section
       // data-scroll-speed tells the speed of scroll
-      data-scroll
-      data-scroll-speed="-.3"
+      // data-scroll
+      // data-scroll-speed="-.3"
       className="w-full h-screen bg-zinc-900 pt-1"
     >
       <div className="text-structure mt-52 px-20">
