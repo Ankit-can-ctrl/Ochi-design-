@@ -8,7 +8,6 @@ import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
 import ReadyToStart from "./components/ReadyToStart";
 import Review from "./components/Review";
-import NavMenu from "./components/Newcomponents/NavMenu";
 
 import LocomotiveScroll from "locomotive-scroll";
 import NewNavbar from "./components/Newcomponents/NewNavbar";
@@ -22,7 +21,7 @@ function App() {
   return (
     <div className="w-full text-white bg-zinc-900">
       {/* <Navbar />
-      <NavMenu /> */}
+       */}
       <NewNavbar />
       <LandingPage />
       <Marquee />

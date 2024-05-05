@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Navbar from "../Navbar";
 const navlinks = ["Services", "Our Work", "About Us", "Insights", "Contact Us"];
 
@@ -12,18 +12,15 @@ function NewNavbar() {
     <>
       {isOpen ? (
         <div>
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ y: "-100%" }}
-                animate={{ y: "0" }}
-                transition={{ duration: 1 }}
-                exit={{ y: "100%" }}
-              >
-                <Navbar handleIsOpen={handleIsOpen} />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ y: "-100%" }}
+              animate={{ y: "0" }}
+              transition={{ duration: 1 }}
+            >
+              <Navbar handleIsOpen={handleIsOpen} />
+            </motion.div>
+          )}
         </div>
       ) : (
         <motion.div className="navbar-container w-full px-20 py-10 flex items-center justify-between">
