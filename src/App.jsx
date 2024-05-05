@@ -5,7 +5,7 @@ import Featured from "./components/Featured";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Marquee from "./components/Marquee";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import ReadyToStart from "./components/ReadyToStart";
 import Review from "./components/Review";
 
