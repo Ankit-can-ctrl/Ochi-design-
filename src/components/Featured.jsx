@@ -32,10 +32,10 @@ function Featured() {
           Featured Projects
         </h1>
       </div>
-      <div className="w-full gap-10 grid grid-cols-2 projects p-20">
+      <div className="w-full gap-10 xl:grid xl:grid-cols-2 projects py-20 px-5 xl:px-20">
         {projectsArr.map((item, index) => (
           <div key={index} className="project-container h-full w-full">
-            <div className=" project-title text-xl flex items-center justify-start gap-4 px-14 h-[4vw] bg-black">
+            <div className=" project-title text-xl flex items-center justify-start gap-4 xl:px-14 py-9 h-[4vw] bg-black">
               <svg
                 color="white"
                 stroke="currentColor"
@@ -55,7 +55,7 @@ function Featured() {
             <div
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="project-img  h-[80%] relative"
+              className="project-img relative"
             >
               <motion.img
                 whileHover={{
@@ -70,12 +70,12 @@ function Featured() {
                 initial={{ opacity: 0 }}
                 animate={isHovering ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 1 }}
-                className="uppercase text-[#CDEA68] top-1/2 left-[16vw] text-8xl font-Founder font-bold tracking-tighter absolute z-10"
+                className="uppercase text-[#CDEA68] md:text-6xl text-4xl top-[50%] left-[30%] md:left-[40%] xl:top-1/2 xl:left-[16vw]  font-Founder font-bold tracking-tighter absolute"
               >
                 {item.name}
               </motion.h1>
             </div>
-            <div className="project-tags px-14 py-5 flex gap-4">
+            <div className="project-tags xl:px-14 py-5 flex gap-4 flex-wrap">
               {item.tags.map((item, index) => (
                 <button
                   key={index}
@@ -92,7 +92,7 @@ function Featured() {
         <motion.button
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
-          className=" bg-white text-black rounded-full text-xl font-Neue font-semibold flex items-center justify-center gap-4 capitalize border-[1px] px-6 py-4"
+          className=" bg-white text-black rounded-full text-md xl:text-xl font-Neue font-semibold flex items-center justify-center gap-4 capitalize border-[1px] px-6 py-4"
         >
           view all work
           <span>

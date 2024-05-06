@@ -11,7 +11,7 @@ function Marquee() {
           initial={{ x: "0" }}
           animate={{ x: "-100%" }}
           transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-          className=" font-semibold text-[70vw] md:text-[20vw] leading-none font-Founder pr-20 uppercase mb-7"
+          className=" font-semibold text-[70vw] md:text-[20vw] leading-none font-Founder pr-20 uppercase"
         >
           We are ochi
         </motion.h1>

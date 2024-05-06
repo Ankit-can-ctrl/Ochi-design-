@@ -6,20 +6,23 @@ function About() {
       // data-scroll
       // data-scroll-section
       // data-scroll-speed=".2"
-      className="w-full h-[100%] rounded-t-3xl text-black bg-[#CDEA68]"
+      className="w-full rounded-t-3xl font-Neue text-black bg-[#d5f269] pb-10"
     >
-      <div className="about-top">
-        <h1 className="w-[80%]  font-Neue text-[3.5vw] tracking-tighter font-normal pt-24  px-20 text-left">
-          Ochi is a strategic partner for fast-growing tech businesses that need
-          to raise funds, sell products, explain complex ideas, and hire great
-          people.
+      <div className="about-top w-full">
+        <h1 className=" text-3xl md:text-5xl font-semibold py-20 pl-10 text-left md:pr-[30%]">
+          Ochi is a strategic partner for fast-growing tech <br /> businesses
+          that need to <span className=" underline">raise funds</span> , sell
+          products,
+          <br />
+          <span className=" underline"> explain complex ideas</span> ,and
+          <span className=" underline"> hire great people.</span>
         </h1>
         <div className=" pt-0 mt-7 border-t-[1px] border-zinc-500 flex justify-between items-center py-10 px-20"></div>
       </div>
-      <div className="about-mid px-24 grid grid-cols-2 font-Neue text-[2.2vh] font-medium pb-10">
-        <h1 className="font">What you can expect:</h1>
-        <div className="about-mid-right grid grid-cols-2 gap-40">
-          <div className="flex flex-col justify-between gap-8">
+      <div className="about-mid px-10 xl:grid xl:grid-cols-2 text-xl font-medium font-Neue">
+        <h1 className="font pb-5">What you can expect:</h1>
+        <div className="about-mid-desc xl:flex xl:gap-10">
+          <div className=" text-left pr-32">
             <p>
               We create tailored presentations to help you persuade your
               colleagues, clients, or investors. Whether it’s live or digital,
@@ -30,7 +33,7 @@ function About() {
               is what makes your message clear, convincing, and captivating.
             </p>
           </div>
-          <div className="about-links flex flex-col items-start gap-8 justify-end">
+          <div className="about-links pt-10 flex flex-col items-start gap-4 justify-end">
             <p>S:</p>
             <ul className="flex flex-col gap-2">
               {["Instagram", "Behance", "Facebook", "LinkedIn"].map(
@@ -45,10 +48,10 @@ function About() {
         </div>
       </div>
       <div className=" pt-0 mt-7 border-t-[1px] border-zinc-500 flex justify-between items-center py-10 px-20"></div>
-      <div className="about-bottom grid grid-cols-2 pb-10">
+      <div className="about-bottom font-Neue flex flex-col gap-10 md:flex-row">
         <div className="about-bottom-left flex flex-col px-10 items-start gap-5">
-          <h1 className=" font-Neue font-semibold text-6xl">Our approach:</h1>
-          <div className="about-bottom-button rounded-full font-Neue flex items-center justify-between px-10 text-white h-[4.5rem] w-[15rem] bg-black">
+          <h1 className=" text-4xl font-semibold md:text-6xl">Our approach:</h1>
+          <div className="about-bottom-button rounded-full flex items-center justify-between gap-5 px-10 text-white h-[4rem] w-fit bg-black">
             <button className="text-xl">Read more</button>
             <svg
               className="text-xl"
@@ -64,7 +67,7 @@ function About() {
             </svg>
           </div>
         </div>
-        <div className="about-bottom-right px-10 flex items-center justify-center">
+        <div className="about-bottom-right px-10">
           <video className=" rounded-xl" autoPlay loop muted playsInline>
             <source src={playback} type="video/mp4" />
           </video>
