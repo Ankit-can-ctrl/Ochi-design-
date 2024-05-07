@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ClientDetail from "./ClientDetail";
 const clientData = [
   {
     company: "Karman Ventures",
@@ -18,37 +19,17 @@ function Reviewclient() {
     <>
       {clientData.map((item, index) => (
         <>
-          <div
-            key={index}
-            className="font-Neue main-container w-full border-b-1 py-4 px-10 grid grid-cols-4 items-start"
-          >
+          <div className="font-Neue main-container w-full border-b-1 py-4 px-10 flex justify-between items-start">
             <h1 className="border-b-2 w-fit">{item.company}</h1>
-            <div className="services flex flex-col items-start gap-20">
-              <h1>Services:</h1>
-              {showDetails && (
-                <div className="flex flex-col items-start justify-between gap-4">
-                  {item.services.map((item, index) => (
-                    <button key={index} className="rounded-full border-2 px-4 ">
-                      Investor Deck
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-            <div className="client-desc flex flex-col items-start justify-between gap-5">
-              <h1 className="capitalize">{item.name}</h1>
-              {showDetails && (
-                <>
-                  <img
-                    className=" h-28 rounded-lg"
-                    src={item.img}
-                    alt="client image"
-                  />
-                  <p>{item.desc}</p>
-                </>
-              )}
-            </div>
-            <button onClick={handleDetails}>Read More</button>
+
+            <button className=" underline" onClick={() => handleDetails()}>
+              Read More
+            </button>
+          </div>
+          <div className="">
+            {showDetails && (
+              <ClientDetail showDetails={showDetails} item={item} />
+            )}
           </div>
           <div className="border-b-2 border-zinc-500"></div>
         </>
