@@ -58,6 +58,10 @@ function Featured() {
               className="project-img relative"
             >
               <motion.img
+                whileTap={{
+                  scale: 0.95,
+                  transition: { duration: 0.5, ease: "easeInOut" },
+                }}
                 whileHover={{
                   scale: 0.95,
                   transition: { duration: 0.5, ease: "easeInOut" },
@@ -90,6 +94,7 @@ function Featured() {
       </div>
       <div className="projects-btn w-full px-20 py-10 flex items-center justify-center">
         <motion.button
+          whileTap={{ scale: 1.1 }}
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
           className=" bg-white text-black rounded-full text-md xl:text-xl font-Neue font-semibold flex items-center justify-center gap-4 capitalize border-[1px] px-6 py-4"

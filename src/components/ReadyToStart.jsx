@@ -26,8 +26,8 @@ function ReadyToStart() {
         </div>
         <h1>OR</h1>
         <div>
-          <button className=" hover:text-white hover:bg-black flex items-center justify-center gap-2 border-2 border-black w-fit px-4  py-4 uppercase rounded-full">
-            Start the Project
+          <button className=" hover:text-white active:text-white hover:bg-black active:bg-black flex items-center justify-center gap-2 border-2 border-black w-fit px-4  py-4 uppercase rounded-full">
+            ak537664@gmail.com
             <svg
               stroke="currentColor"
               fill="currentColor"
