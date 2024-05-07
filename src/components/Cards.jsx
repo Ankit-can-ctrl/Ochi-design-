@@ -1,6 +1,6 @@
 function Cards() {
   return (
-    <div className="main-container grid grid-cols-2 px-10 py-10 bg-black">
+    <div className="main-container flex gap-5 flex-col xl:grid xl:grid-cols-2 md:px-10 py-10 bg-black">
       <div className="px-4">
         <div className=" bg-[#004D43] h-[450px] px-6 rounded-lg grid grid-rows-[3fr_.5fr]">
           <div className=" h-full w-full flex items-center justify-center">
@@ -15,7 +15,7 @@ function Cards() {
           </button>
         </div>
       </div>
-      <div className="px-4 grid grid-cols-2 gap-6">
+      <div className="px-4 flex flex-col xl:grid xl:grid-cols-2 gap-6">
         <div className=" bg-[#212121] h-[450px] px-6 rounded-lg grid grid-rows-[3fr_.5fr]">
           <div className=" h-full w-full flex items-center justify-center">
             <img

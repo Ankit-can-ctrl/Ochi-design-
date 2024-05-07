@@ -1,16 +1,10 @@
 function ReadyToStart() {
   return (
-    <div className="w-full bg-[#CDEA68] h-fit px-20 py-32">
-      <div className="title w-full h-fit">
-        <h1 className="uppercase text-black text-[200px] font-Founder font-bold tracking-tight leading-none text-center">
-          ready
-        </h1>
-        <h1 className="uppercase text-black text-[200px] font-Founder font-bold tracking-tight leading-none text-center">
-          to start
-        </h1>
-        <h1 className="uppercase text-black text-[200px] font-Founder font-bold tracking-tight leading-none text-center">
-          the project ?
-        </h1>
+    <div className="w-full bg-[#CDEA68] h-fit rounded-t-xl py-32">
+      <div className="title uppercase text-black text-center text-[3.2rem] md:text-8xl xl:text-[200px] font-Founder font-bold tracking-tight leading-none w-full h-fit">
+        <h1 className="">ready</h1>
+        <h1 className="">to start</h1>
+        <h1 className="">the project ?</h1>
       </div>
       <div className="eyes"></div>
       <div className="buttons overflow-hidden text-black font-semibold w-full pt-32 flex flex-col gap-4 font-Neue items-center justify-center">

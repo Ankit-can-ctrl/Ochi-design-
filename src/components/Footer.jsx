@@ -1,13 +1,13 @@
 function Footer() {
   return (
     <div className="bg-white w-full px-10 py-20">
-      <div className="footer-top text-black grid grid-cols-2">
-        <div className=" font-Founder text-[6vw] leading-none tracking-tighter font-bold">
+      <div className="footer-top text-black flex flex-col md:grid md:grid-cols-2">
+        <div className=" font-Founder text-[2.5rem] md:text-6xl xl:text-8xl leading-none tracking-tighter font-bold">
           <h1 className="uppercase ">eye-</h1>
           <h1 className="uppercase ">opening</h1>
         </div>
         <div>
-          <div className="font-Founder text-[6vw] leading-none tracking-tighter font-bold uppercase">
+          <div className="font-Founder text-[2.5rem] md:text-6xl xl:text-8xl leading-none tracking-tighter font-bold uppercase">
             presentation
           </div>
           <div className="links flex flex-col py-20 gap-10">
@@ -23,7 +23,7 @@ function Footer() {
                 )}
               </div>
             </div>
-            <div className="address-links grid grid-cols-2 font-Neue text-xl">
+            <div className="address-links flex flex-col gap-10 md:grid md:grid-cols-2 font-Neue text-xl">
               <div className="flex flex-col gap-4">
                 <h1>L:</h1>
                 <div className="flex flex-col gap-4 justify-end">
@@ -38,9 +38,9 @@ function Footer() {
                 </div>
                 <div className="email underline">ak537664@gmail.com</div>
               </div>
-              <div className="services-links font-Founder text-xl flex flex-col items-end gap-4 ">
+              <div className="services-links font-Founder text-xl flex flex-col items-start md:items-end gap-4 ">
                 <h1>M:</h1>
-                <div className="flex flex-col items-end gap-1 underline capitalize ">
+                <div className="flex flex-col items-start md:items-end gap-1 underline capitalize ">
                   {[
                     "Home",
                     "Services",
@@ -59,7 +59,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className=" font-Neue text-xl footer-end text-black flex w-full items-center justify-between pt-20">
+      <div className=" font-Neue text-xl footer-end text-black flex flex-col xl:flex-row w-full items-start xl:items-center justify-between pt-20 gap-10">
         <svg
           className="text-black"
           width="72"
