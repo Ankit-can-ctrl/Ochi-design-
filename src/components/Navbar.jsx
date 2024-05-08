@@ -2,7 +2,7 @@ const navlinks = ["Services", "Our Work", "About Us", "Insights", "Contact Us"];
 /*eslint-disable*/
 function Navbar({ handleIsOpen }) {
   return (
-    <div className="w-full z-[1000] bg-zinc-900">
+    <div className="w-full z-[1000] bg-zinc-900 text-white">
       <div className="header border-b-2 border-zinc-400 p-20 flex items-center justify-between">
         <div className="  logo  cursor-pointer">
           <svg

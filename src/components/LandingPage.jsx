@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const mainHeadnig = ["We Create", "Eye Opening", "Presentations"];
 function LandingPage() {
+  const isMobile = useMediaQuery({ maxWidth: "600px" });
   return (
     <div
       // data-scroll allows us to vary speed of scroll of the element
       // data-scroll-section tells it is a different section
       // data-scroll-speed tells the speed of scroll
-      // data-scroll
-      // data-scroll-speed="-.3"
-      className="w-full bg-zinc-900 pt-1"
+
+      // data-scroll-container
+      className="w-full bg-zinc-900 text-white pt-1"
     >
       <div className="text-structure pt-40 pl-5 sm:px-20">
         {mainHeadnig.map((item, index) => {
@@ -19,7 +21,7 @@ function LandingPage() {
                 {index === 1 && (
                   <motion.img
                     initial={{ width: 0 }}
-                    animate={{ width: "100px" }}
+                    animate={isMobile ? { width: "5rem" } : { width: "9rem" }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
                     className=" h-[50px] w-[90px] sm:h-[60px] md:w-[100px] xl:h-[100px] rounded-lg relative top-2 "
                     src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
@@ -27,7 +29,7 @@ function LandingPage() {
                   />
                 )}
 
-                <h1 className=" text-[2.5rem] md:text-[5.5rem] sm:text-[3.5rem] xl:text-[8rem] tracking-tighter font-semibold leading-[1.5] xl:leading-[1] uppercase font-Founder ">
+                <h1 className=" text-[2.9rem] md:text-[5.5rem] sm:text-[3.5rem] xl:text-[8rem] tracking-tighter font-semibold leading-[1.5] xl:leading-[1] uppercase font-Founder ">
                   {item}
                 </h1>
               </div>

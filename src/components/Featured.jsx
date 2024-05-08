@@ -28,7 +28,7 @@ function Featured() {
   return (
     <div className="w-full h-min py-20  bg-black">
       <div className="w-full  border-b-[.1px] border-zinc-600 pb-10">
-        <h1 className="px-20 tracking-tighter font-Neue text-[3.5vw] ">
+        <h1 className=" px-10 md:px-20 tracking-tighter font-Neue text-[2rem] xl:text-[3.5vw] ">
           Featured Projects
         </h1>
       </div>
@@ -73,6 +73,8 @@ function Featured() {
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={isHovering ? { opacity: 1 } : { opacity: 0 }}
+                whileHover={isHovering ? { opacity: 1 } : { opacity: 0 }}
+                whileTap={isHovering ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 1 }}
                 className="uppercase text-[#CDEA68] md:text-6xl text-4xl top-[50%] left-[30%] md:left-[40%] xl:top-1/2 xl:left-[16vw]  font-Founder font-bold tracking-tighter absolute"
               >

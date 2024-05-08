@@ -23,7 +23,7 @@ function NewNavbar() {
           )}
         </div>
       ) : (
-        <motion.div className="navbar-container w-full px-10 md:px-20 py-10 flex items-center justify-between">
+        <motion.div className="navbar-container bg-zinc-900 text-white w-full px-10 md:px-20 py-10 flex items-center justify-between">
           <div className="logo cursor-pointer">
             <svg
               width="72"
