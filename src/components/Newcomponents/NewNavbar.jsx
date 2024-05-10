@@ -9,7 +9,7 @@ function NewNavbar() {
     setIsOpen(!isOpen);
   }
   return (
-    <>
+    <div>
       {isOpen ? (
         <div>
           {isOpen && (
@@ -99,7 +99,7 @@ function NewNavbar() {
           </div>
         </motion.div>
       )}
-    </>
+    </div>
   );
 }
 

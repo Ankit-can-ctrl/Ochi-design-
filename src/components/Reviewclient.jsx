@@ -18,7 +18,7 @@ function Reviewclient() {
   return (
     <>
       {clientData.map((item, index) => (
-        <>
+        <div key={index}>
           <div className="font-Neue main-container w-full border-b-1 py-4 px-10 flex justify-between items-start">
             <h1 className="border-b-2 w-fit">{item.company}</h1>
 
@@ -26,13 +26,13 @@ function Reviewclient() {
               Read More
             </button>
           </div>
-          <div className="">
+          <div>
             {showDetails && (
               <ClientDetail showDetails={showDetails} item={item} />
             )}
           </div>
           <div className="border-b-2 border-zinc-500"></div>
-        </>
+        </div>
       ))}
     </>
   );

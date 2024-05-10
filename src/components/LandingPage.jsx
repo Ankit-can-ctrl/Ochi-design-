@@ -11,6 +11,9 @@ function LandingPage() {
       // data-scroll-speed tells the speed of scroll
 
       // data-scroll-container
+      // data-scroll
+      // data-scroll-section
+      // data-scroll-speed="-.3"
       className="w-full bg-zinc-900 text-white pt-1"
     >
       <div className="text-structure pt-40 pl-5 sm:px-20">

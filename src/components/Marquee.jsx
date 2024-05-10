@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 function Marquee() {
   return (
-    <div className=" bg-zinc-900 text-white">
+    <div
+      // data-scroll
+      // data-scroll-section
+      // data-scroll-speed=".3"
+      className=" bg-zinc-900 text-white"
+    >
       <div className="w-full py-[3vh] h-fit md:h-fit rounded-t-3xl bg-[#004D43]">
         <div className="text border-t-2 border-b-2 border-zinc-200 flex  overflow-hidden whitespace-nowrap">
           <motion.h1
