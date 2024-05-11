@@ -1,21 +1,18 @@
-import { useState } from "react";
 import NewNavbar from "../components/Newcomponents/NewNavbar";
 import HolisticProcess from "./HolisticProcess";
-const processArray = [
-  {
-    title: "Discovery",
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/1.Discovery-194x194.png",
-    details:
-      "We define your goals, get to know your audience, and understand the context. Through a process of exploration, investigation, and research, we seek the insights that inform our future decisions.",
-  },
-];
 
 function Services() {
-  const [isOpenprocess, setIsOpenProcess] = useState(false);
-  function handleOpenProcess() {
-    setIsOpenProcess(!isOpenprocess);
-  }
+  const processArray = [
+    {
+      head: "01.Phase",
+      title: "Discovery",
+      image:
+        "https://ochi.design/wp-content/uploads/2022/05/1.Discovery-194x194.png",
+      details:
+        "We define your goals, get to know your audience, and understand the context. Through a process of exploration, investigation, and research, we seek the insights that inform our future decisions.",
+    },
+  ];
+
   return (
     <div className="text-white font-Neue">
       <NewNavbar />
@@ -66,10 +63,11 @@ function Services() {
             Holistic process:
           </h1>
         </div>
-        <HolisticProcess
-          handleOpenProcess={handleOpenProcess}
-          processArray={processArray}
-        />
+        <HolisticProcess processArray={processArray} />
+        <HolisticProcess processArray={processArray} />
+        <HolisticProcess processArray={processArray} />
+        <HolisticProcess processArray={processArray} />
+        <HolisticProcess processArray={processArray} />
       </div>
     </div>
   );
