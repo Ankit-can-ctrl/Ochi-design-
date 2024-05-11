@@ -30,7 +30,7 @@ function HolisticProcess(props) {
                   src={item.image}
                   alt="process image"
                 />
-                <p>{item.details}</p>
+                <p className="md:w-[50%] md:pt-10">{item.details}</p>
               </div>
             </div>
           )}
