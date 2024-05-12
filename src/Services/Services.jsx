@@ -32,11 +32,15 @@ const Capabilities = [
 
 function Services() {
   const [currentImage, setCurrentImage] = useState(null);
-  function handleTagHover(tag) {
-    const imageObject = Capabilities.find((item) => item.tags.includes(tag));
-    if (imageObject) {
-      setCurrentImage(imageObject.image);
-    }
+  function handleTagHover(index) {
+    setCurrentImage(Capabilities[index].image);
+    // const imageObject = Capabilities.find((item) => item.tags.includes(tag));
+    // if (imageObject) {
+    //   setCurrentImage(imageObject.image);
+    // }
+  }
+  function handleOnLeave() {
+    setCurrentImage(null);
   }
 
   const processArray = [
@@ -151,14 +155,14 @@ function Services() {
                   <h1 className="uppercase">{item.title} :</h1>
                 </div>
                 <div className="flex flex-col gap-5">
-                  {item.tags.map((item, index) => (
-                    <div key={index}>
+                  {item.tags.map((tag, tagIndex) => (
+                    <div key={tagIndex}>
                       <button
-                        onMouseEnter={() => handleTagHover(item)}
-                        onMouseLeave={() => setCurrentImage()}
+                        onMouseEnter={() => handleTagHover(index)}
+                        onMouseLeave={handleOnLeave}
                         className="tag uppercase hover:text-white hover:border-white hover:bg-black w-fit border-2 border-[#96aa4b] px-4 py-2 rounded-full"
                       >
-                        {item}
+                        {tag}
                       </button>
                     </div>
                   ))}
