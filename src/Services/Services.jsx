@@ -3,6 +3,9 @@ import NewNavbar from "../components/Newcomponents/NewNavbar";
 import HolisticProcess from "./HolisticProcess";
 import { motion } from "framer-motion";
 import Review from "../components/Review";
+import Marquee from "../components/Marquee";
+import ReadyToStart from "../components/ReadyToStart";
+import Footer from "../components/Footer";
 
 const fadeInAnimationVariant = {
   initial: {
@@ -245,6 +248,41 @@ function Services() {
             </div>
           ))}
         </div>
+      </div>
+      <div>
+        <Marquee />
+      </div>
+      <div className="detail-cards bg-[#004D43] py-10 flex flex-col px-5 gap-10 md:grid md:grid-cols-2">
+        <h1 className=" font-semibold md:text-4xl xl:text-6xl">
+          What can you expect
+        </h1>
+        <div className="flex flex-col gap-5 lg:grid lg:grid-cols-2">
+          <div className="card min-h-[250px]  bg-[#3b7b72] rounded-xl p-5 flex flex-col items-start gap-28 justify-between">
+            <h1 className=" text-6xl font-semibold">01</h1>
+            <div className="flex flex-col gap-6">
+              <div className="flex w-full justify-between underline">
+                <button className="heading">Communication</button>
+                <button className="read-hide">Read</button>
+              </div>
+              <div className="">
+                <p className=" ">
+                  The relationship with the clients is our top priority. We put
+                  extra effort into keeping mutual respect, honesty, and clarity
+                  in the conversation. For each client, we develop a project
+                  view site in Notion to track milestones and see the thinking
+                  behind steps. You always know what and when we do, as you feel
+                  confident in the results we bring.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" bg-[#004D43] ">
+        <ReadyToStart />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
