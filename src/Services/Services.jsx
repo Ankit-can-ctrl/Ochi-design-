@@ -2,46 +2,49 @@ import { useState } from "react";
 import NewNavbar from "../components/Newcomponents/NewNavbar";
 import HolisticProcess from "./HolisticProcess";
 import { motion } from "framer-motion";
+import Review from "../components/Review";
 
-const Capabilities = [
-  {
-    title: "Raise funds",
-    tags: ["investors deck", "startup pitch"],
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/Asset-38-20-663x450.jpg",
+const fadeInAnimationVariant = {
+  initial: {
+    opacity: 0,
   },
-  {
-    title: "Raise funds",
-    tags: ["investors deck", "startup pitch"],
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/Asset-36-20-663x448.jpg",
-  },
-  {
-    title: "Raise funds",
-    tags: ["investors deck", "startup pitch"],
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/Asset-39-20-663x448.jpg",
-  },
-  {
-    title: "Raise funds",
-    tags: ["investors deck", "startup pitch"],
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/Asset-37-20-663x448.jpg",
-  },
-];
+  //we can also use animte of framer motions as a javascript function
+  animate: (i) => ({
+    opacity: 1,
+    transition: {
+      duration: 5,
+      delay: i * 0.2, //each letter will be delayed this much
+    },
+  }),
+};
 
 function Services() {
-  const [currentImage, setCurrentImage] = useState(null);
-  function handleTagHover(index) {
-    setCurrentImage(Capabilities[index].image);
-    // const imageObject = Capabilities.find((item) => item.tags.includes(tag));
-    // if (imageObject) {
-    //   setCurrentImage(imageObject.image);
-    // }
-  }
-  function handleOnLeave() {
-    setCurrentImage(null);
-  }
+  const Capabilities = [
+    {
+      title: "Raise funds",
+      tags: ["investors deck", "startup pitch"],
+      image:
+        "https://ochi.design/wp-content/uploads/2022/05/Asset-38-20-663x450.jpg",
+    },
+    {
+      title: "Raise funds",
+      tags: ["investors deck", "startup pitch"],
+      image:
+        "https://ochi.design/wp-content/uploads/2022/05/Asset-36-20-663x448.jpg",
+    },
+    {
+      title: "Raise funds",
+      tags: ["investors deck", "startup pitch"],
+      image:
+        "https://ochi.design/wp-content/uploads/2022/05/Asset-39-20-663x448.jpg",
+    },
+    {
+      title: "Raise funds",
+      tags: ["investors deck", "startup pitch"],
+      image:
+        "https://ochi.design/wp-content/uploads/2022/05/Asset-37-20-663x448.jpg",
+    },
+  ];
 
   const processArray = [
     {
@@ -53,6 +56,25 @@ function Services() {
         "We define your goals, get to know your audience, and understand the context. Through a process of exploration, investigation, and research, we seek the insights that inform our future decisions.",
     },
   ];
+
+  const cardsArray = [
+    { head: "100+", desc: "Clients from 17 Countries" },
+    { head: "100+", desc: "Clients from 17 Countries" },
+    { head: "100+", desc: "Clients from 17 Countries" },
+    { head: "100+", desc: "Clients from 17 Countries" },
+  ];
+
+  const [currentImage, setCurrentImage] = useState(null);
+  function handleTagHover(index) {
+    setCurrentImage(Capabilities[index].image);
+    // const imageObject = Capabilities.find((item) => item.tags.includes(tag));
+    // if (imageObject) {
+    //   setCurrentImage(imageObject.image);
+    // }
+  }
+  function handleOnLeave() {
+    setCurrentImage(null);
+  }
 
   return (
     <div className="text-white font-Neue">
@@ -110,7 +132,7 @@ function Services() {
         <HolisticProcess processArray={processArray} />
         <HolisticProcess processArray={processArray} />
       </div>
-      <div className="w-full bg-[#d5f269] rounded-t-2xl my-10">
+      <div className="w-full bg-[#d5f269] rounded-t-2xl mt-10 pb-10">
         <div className="descripton border-b-2 border-[#9cad5d] text-black font-Neue">
           <p className="px-10 py-20 font-medium text-2xl md:text-4xl xl:text-6xl">
             Lets be honest. There are really no excuses to have a bad
@@ -124,7 +146,7 @@ function Services() {
             <h1 className="text-2xl font-semibold md:text-4xl md:font-medium xl:text-6xl">
               Our Capabilities:
             </h1>
-            <div>
+            <div className="hidden md:block">
               {currentImage && (
                 <motion.img
                   initial={{ opacity: 0 }}
@@ -170,6 +192,58 @@ function Services() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+      <div>
+        <Review />
+      </div>
+      <div className="bg-black py-10 border-b-2 border-zinc-600">
+        <img
+          className="p-5 rounded-xl"
+          src="https://ochi.design/wp-content/uploads/2023/08/Group-61165.png"
+          alt="services image"
+        />
+      </div>
+      <div className="ochi-numbers bg-black px-4 md:px-10 py-20 flex flex-col gap-14 md:grid md:grid-cols-2 font-Neue ">
+        <h1 className=" font-semibold text-xl md:text-4xl lg:text-6xl">
+          Ochi in numbers:
+        </h1>
+        <div className="flex flex-col gap-7 lg:grid lg:grid-cols-2">
+          {cardsArray.map((item, index) => (
+            <div
+              key={index}
+              className="numbers-card bg-zinc-800 p-5 min-h-[250px] flex flex-col items-start justify-between rounded-2xl"
+            >
+              <h1 className=" text-6xl font-semibold">
+                {item.head.split("").map((el, i) => (
+                  <motion.span
+                    variants={fadeInAnimationVariant} //using created animation
+                    initial="initial"
+                    whileInView="animate" //animate only when in view
+                    key={i}
+                    custom={i} //passing i(index) to the animate as a function
+                    viewport={{ once: true }} //this happens only one time
+                  >
+                    {el}
+                  </motion.span>
+                ))}
+              </h1>
+              <p className=" font-medium">
+                {item.desc.split(" ").map((el, i) => (
+                  <motion.span
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    custom={i}
+                    key={i}
+                    viewport={{ once: true }}
+                  >
+                    {el} <span> </span>
+                  </motion.span>
+                ))}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
