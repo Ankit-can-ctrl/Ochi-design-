@@ -1,7 +1,7 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import NewNavbar from "../components/Newcomponents/NewNavbar";
 import HolisticProcess from "./HolisticProcess";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import Review from "../components/Review";
 import Marquee from "../components/Marquee";
 import ReadyToStart from "../components/ReadyToStart";
@@ -27,7 +27,28 @@ function Services() {
   //   target: ref,
   //   offset: ["0 1", "1.33 1"],
   // });
-
+  const greenCards = [
+    {
+      subHeading: "Communication",
+      description:
+        "The relationship with the clients is our top priority. We put extra effort into keeping mutual respect, honesty, and clarity in the conversation. For each client, we develop a project view site in Notion to track milestones and see the thinking behind steps. You always know what and when we do, as you feel confident in the results we bring.",
+    },
+    {
+      subHeading: "Communication",
+      description:
+        "The relationship with the clients is our top priority. We put extra effort into keeping mutual respect, honesty, and clarity in the conversation. For each client, we develop a project view site in Notion to track milestones and see the thinking behind steps. You always know what and when we do, as you feel confident in the results we bring.",
+    },
+    {
+      subHeading: "Communication",
+      description:
+        "The relationship with the clients is our top priority. We put extra effort into keeping mutual respect, honesty, and clarity in the conversation. For each client, we develop a project view site in Notion to track milestones and see the thinking behind steps. You always know what and when we do, as you feel confident in the results we bring.",
+    },
+    {
+      subHeading: "Communication",
+      description:
+        "The relationship with the clients is our top priority. We put extra effort into keeping mutual respect, honesty, and clarity in the conversation. For each client, we develop a project view site in Notion to track milestones and see the thinking behind steps. You always know what and when we do, as you feel confident in the results we bring.",
+    },
+  ];
   const Capabilities = [
     {
       title: "Raise funds",
@@ -72,6 +93,14 @@ function Services() {
     { head: "100+", desc: "Clients from 17 Countries" },
     { head: "100+", desc: "Clients from 17 Countries" },
   ];
+
+  const [readOpen, setReadOpen] = useState({});
+  function handleReadOpen(index) {
+    setReadOpen((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  }
 
   const [currentImage, setCurrentImage] = useState(null);
   function handleTagHover(index) {
@@ -272,25 +301,48 @@ function Services() {
           What can you expect
         </h1>
         <div className="flex flex-col gap-5 lg:grid lg:grid-cols-2">
-          <div className="card min-h-[250px]  bg-[#3b7b72] rounded-xl p-5 flex flex-col items-start gap-28 justify-between">
-            <h1 className=" text-6xl font-semibold">01</h1>
-            <div className="flex flex-col gap-6">
-              <div className="flex w-full justify-between underline">
-                <button className="heading">Communication</button>
-                <button className="read-hide">Read</button>
-              </div>
-              <div className="">
-                <p className=" ">
+          {greenCards.map((item, index) => (
+            <div
+              key={index}
+              className="card min-h-[250px]  bg-[#3b7b72] rounded-xl p-5 flex flex-col items-start gap-28 justify-between"
+            >
+              <h1 className=" text-6xl font-semibold">
+                {index <= 9 ? "0" : ""}
+                {index}
+              </h1>
+              <div className="flex flex-col gap-6">
+                <div className="flex w-full justify-between underline">
+                  <button
+                    className="heading"
+                    onClick={() => handleReadOpen(index)}
+                  >
+                    Communication
+                  </button>
+                  <button
+                    className="read-hide"
+                    onClick={() => handleReadOpen(index)}
+                  >
+                    {readOpen[index] ? "close" : "Read"}
+                  </button>
+                </div>
+
+                <motion.p
+                  initial={{ height: "0" }}
+                  animate={
+                    readOpen[index] ? { height: "100%" } : { height: "0" }
+                  }
+                  className="overflow-hidden"
+                >
                   The relationship with the clients is our top priority. We put
                   extra effort into keeping mutual respect, honesty, and clarity
                   in the conversation. For each client, we develop a project
                   view site in Notion to track milestones and see the thinking
                   behind steps. You always know what and when we do, as you feel
                   confident in the results we bring.
-                </p>
+                </motion.p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
       <div className=" bg-[#004D43] ">
