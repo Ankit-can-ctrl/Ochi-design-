@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import NewNavbar from "../components/Newcomponents/NewNavbar";
 import HolisticProcess from "./HolisticProcess";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Review from "../components/Review";
 import Marquee from "../components/Marquee";
 import ReadyToStart from "../components/ReadyToStart";
@@ -22,6 +22,12 @@ const fadeInAnimationVariant = {
 };
 
 function Services() {
+  // const ref = useRef< HTMLDivElement >(null); //prettier-ignore
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["0 1", "1.33 1"],
+  // });
+
   const Capabilities = [
     {
       title: "Raise funds",
@@ -200,12 +206,21 @@ function Services() {
       <div>
         <Review />
       </div>
-      <div className="bg-black py-10 border-b-2 border-zinc-600">
-        <img
-          className="p-5 rounded-xl"
-          src="https://ochi.design/wp-content/uploads/2023/08/Group-61165.png"
-          alt="services image"
-        />
+      <div className="bg-black py-10 border-b-2 overflow-hidden border-zinc-600">
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1.2, 1, 1],
+            // rotate: [0, 0, 360, 360, 0],
+            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          }}
+          transition={{ duration: 9, repeat: Infinity }}
+        >
+          <img
+            className="p-5 rounded-xl"
+            src="https://ochi.design/wp-content/uploads/2023/08/Group-61165.png"
+            alt="services image"
+          />
+        </motion.div>
       </div>
       <div className="ochi-numbers bg-black px-4 md:px-10 py-20 flex flex-col gap-14 md:grid md:grid-cols-2 font-Neue ">
         <h1 className=" font-semibold text-xl md:text-4xl lg:text-6xl">
