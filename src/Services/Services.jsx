@@ -308,7 +308,7 @@ function Services() {
             >
               <h1 className=" text-6xl font-semibold">
                 {index <= 9 ? "0" : ""}
-                {index}
+                {index + 1}
               </h1>
               <div className="flex flex-col gap-6">
                 <div className="flex w-full justify-between underline">
