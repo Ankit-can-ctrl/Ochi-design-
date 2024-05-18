@@ -1,11 +1,12 @@
 import { useState } from "react";
-import NewNavbar from "../components/Newcomponents/NewNavbar";
+
 import HolisticProcess from "./HolisticProcess";
 import { motion } from "framer-motion";
 import Review from "../components/Review";
 import Marquee from "../components/Marquee";
 import ReadyToStart from "../components/ReadyToStart";
 import Footer from "../components/Footer";
+import Navigation from "../components/navigation bar/Navigation";
 
 const fadeInAnimationVariant = {
   initial: {
@@ -116,7 +117,7 @@ function Services() {
 
   return (
     <div className="text-white font-Neue">
-      <NewNavbar />
+      <Navigation />
       <div className="landing-page w-full text-white font">
         <div className=" md:text-6xl xl:text-8xl heading uppercase px-10 py-20 xl:py-28 font-Founder text-5xl font-semibold tracking-tighter border-b-2 border-zinc-600">
           Services

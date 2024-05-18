@@ -1,11 +1,11 @@
 // import Eyes from "../components/Eyes";
 import { useEffect, useState } from "react";
-import NewNavbar from "../components/Newcomponents/NewNavbar";
 import Featured from "../components/Featured";
 import Marquee from "../components/Marquee";
 import { motion } from "framer-motion";
 import ReadyToStart from "../components/ReadyToStart";
 import Footer from "../components/Footer";
+import Navigation from "../components/navigation bar/Navigation";
 
 const publicationData = [
   {
@@ -42,7 +42,7 @@ function Work() {
   return (
     <div className="main-work-container">
       <div className="work-nav">
-        <NewNavbar />
+        <Navigation />
       </div>
       <div className=" bg-black">
         <div className="work-eyes h-fit rounded-t-3xl bg-[#d5f269] pt-20 overflow-hidden">
