@@ -99,7 +99,12 @@ function MobileLinksOpen({ toggleMenu }) {
       exit="exit"
       className=" bg-black w-full origin-top"
     >
-      <div className=" text-white px-10 flex items-center justify-between py-7">
+      <div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className=" text-white px-10 flex items-center justify-between py-7"
+      >
         <div className="logo">
           {/* ==========Logo Svg===============s */}
           <svg

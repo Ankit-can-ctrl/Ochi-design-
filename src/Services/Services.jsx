@@ -295,7 +295,7 @@ function Services() {
         </div>
       </div>
       <div>
-        <Marquee />
+        <Marquee text={"i'm the one yeah"} />
       </div>
       <div className="detail-cards bg-[#004D43] py-10 flex flex-col px-5 gap-10 md:grid md:grid-cols-2">
         <h1 className=" font-semibold md:text-4xl xl:text-6xl">

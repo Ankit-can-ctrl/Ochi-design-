@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-function Marquee() {
+function Marquee({ text }) {
   return (
     <div
       // data-scroll
@@ -15,7 +15,7 @@ function Marquee() {
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
             className=" font-semibold text-[70vw] md:text-[20vw] leading-none font-Founder pr-20 uppercase"
           >
-            We are ochi
+            {text}
           </motion.h1>
           <motion.h1
             initial={{ x: "0" }}
@@ -23,7 +23,7 @@ function Marquee() {
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
             className=" font-semibold text-[70vw] md:text-[20vw] leading-none font-Founder pr-20 uppercase mb-7"
           >
-            We are ochi
+            {text}
           </motion.h1>
         </div>
       </div>

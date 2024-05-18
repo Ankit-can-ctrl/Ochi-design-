@@ -15,6 +15,8 @@ import Services from "./Services/Services";
 import Work from "./work/Work";
 import AboutUs from "./AboutUs/AboutUs";
 import Navigation from "./components/navigation bar/Navigation";
+import LandingLinks from "./components/LandingLinks";
+import HomeLandingPage from "./components/HomeLandingPage";
 
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
@@ -24,19 +26,20 @@ function App() {
   // className="w-full text-white bg-zinc-900" use for main div for all components
   return (
     <div className="text-white">
-      <Navigation />
-      <LandingPage />
-      <Marquee />
+      {/* <Navigation />
+      <HomeLandingPage />
+      <Marquee text={"we are ochi"} />
       <About />
       <Eyes />
       <Featured />
       <Review />
       <Cards />
       <ReadyToStart />
-      <Footer />
+      <Footer /> */}
       {/* <Services />
-      <Work />
-      <AboutUs /> */}
+      <Work /> */}
+
+      <AboutUs />
       {/* <Navigation /> */}
     </div>
   );
