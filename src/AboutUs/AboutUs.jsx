@@ -4,6 +4,9 @@ import LandingPage from "../components/LandingPage";
 import Navigation from "../components/navigation bar/Navigation";
 import Marquee from "../components/Marquee";
 import ImageSlider from "./ImageSlider";
+import DragCards from "./DragCards";
+import ReadyToStart from "../components/ReadyToStart";
+import Footer from "../components/Footer";
 
 function AboutUs() {
   const text = "core of the team";
@@ -113,8 +116,16 @@ function AboutUs() {
               brands across the globe:
             </h1>
           </div>
-          <div className="dragable-cards">cards</div>
+          <div className="dragable-cards">
+            <DragCards />
+          </div>
         </div>
+      </div>
+      <div>
+        <ReadyToStart />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

@@ -19,6 +19,8 @@ import LandingLinks from "./components/LandingLinks";
 import HomeLandingPage from "./components/HomeLandingPage";
 import ImageSlider from "./AboutUs/ImageSlider";
 import DragCards from "./AboutUs/DragCards";
+import CursorMask from "./components/CursorMask";
+import Test from "./Test";
 
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
@@ -38,9 +40,9 @@ function App() {
       <Cards />
       <ReadyToStart />
       <Footer /> */}
-
-      {/* <AboutUs /> */}
-      <DragCards />
+      {/* <Test /> */}
+      <AboutUs />
+      {/* <CursorMask /> */}
     </div>
   );
 }
