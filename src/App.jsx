@@ -21,6 +21,7 @@ import ImageSlider from "./AboutUs/ImageSlider";
 import DragCards from "./AboutUs/DragCards";
 import CursorMask from "./components/CursorMask";
 import Test from "./Test";
+import Insight from "./Insight/Insight";
 
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
@@ -40,9 +41,7 @@ function App() {
       <Cards />
       <ReadyToStart />
       <Footer /> */}
-      {/* <Test /> */}
-      <AboutUs />
-      {/* <CursorMask /> */}
+      <Insight />
     </div>
   );
 }

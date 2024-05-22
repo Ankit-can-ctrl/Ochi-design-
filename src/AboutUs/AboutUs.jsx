@@ -69,9 +69,9 @@ function AboutUs() {
       </div>
       <div className=" slider bg-[#004D43]">
         <Marquee text={text} />
-        <div className="slide-cards">
-          <ImageSlider />
-        </div>
+      </div>
+      <div className="slide-cards bg-[#004D43] ">
+        <ImageSlider />
       </div>
       <div className="bg-[#004D43]">
         <div className="text-section rounded-t-3xl py-20 bg-white text-black">

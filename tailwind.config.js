@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Founder: ["Teko", "sans - serif"],
+        Founder: ["Yanone Kaffeesatz", "sans-serif"],
         Neue: ["Raleway", "sans-serif"],
       },
     },
