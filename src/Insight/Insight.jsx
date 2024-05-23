@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Navigation from "../components/navigation bar/Navigation";
 import { useEffect, useRef, useState } from "react";
+import InsightCards from "./InsightCards";
 const latestInsights = [
   "All",
   "presentation template",
@@ -31,7 +32,7 @@ function Insight() {
           <h1 className=" font-Neue px-10 font-semibold">Latest Insights:</h1>
           <motion.div
             ref={filter}
-            className=" py-2 px-10 bg-slate-400 rounded-2xl overflow-hidden mx-6"
+            className=" py-3 px-10 bg-slate-400 rounded-2xl overflow-hidden mx-6"
           >
             <motion.div
               drag="x"
@@ -49,13 +50,7 @@ function Insight() {
             </motion.div>
           </motion.div>
         </div>
-        {/* <div className="card">
-          <img
-            src="https://ochi.design/wp-content/uploads/2023/11/Frame-4126-1-324x394.png"
-            alt="work"
-          />
-          <h2></h2>
-        </div> */}
+        <InsightCards />
       </div>
     </div>
   );
