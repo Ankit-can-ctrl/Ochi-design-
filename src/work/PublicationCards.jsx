@@ -28,7 +28,7 @@ function PublicationCards() {
         <h1 className=" font-Neue px-5 font-semibold text-2xl ">
           Latest Publications:
         </h1>
-        <div className="flex flex-col md:flex-row gap-5 items-center justify-center">
+        <div className="flex cursor-pointer flex-col md:flex-row gap-5 items-center justify-center">
           {" "}
           {publicationData.map((item, index) => (
             <motion.div

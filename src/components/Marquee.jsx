@@ -13,7 +13,7 @@ function Marquee({ text }) {
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+            className=" cursor-pointer font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
           >
             {text}
           </motion.h1>
@@ -21,7 +21,7 @@ function Marquee({ text }) {
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+            className=" cursor-pointer font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
           >
             {text}
           </motion.h1>
@@ -29,7 +29,7 @@ function Marquee({ text }) {
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+            className=" cursor-pointer font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
           >
             {text}
           </motion.h1>
@@ -37,7 +37,7 @@ function Marquee({ text }) {
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+            className=" cursor-pointer font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
           >
             {text}
           </motion.h1>
@@ -45,7 +45,7 @@ function Marquee({ text }) {
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+            className=" cursor-pointer font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
           >
             {text}
           </motion.h1>

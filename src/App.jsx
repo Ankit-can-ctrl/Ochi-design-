@@ -23,6 +23,7 @@ import CursorMask from "./components/CursorMask";
 import Test from "./Test";
 import Insight from "./Insight/Insight";
 import NewTest from "./NewTest";
+import ContactUs from "./ContactUs/ContactUs";
 
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
@@ -42,7 +43,7 @@ function App() {
       <Cards />
       <ReadyToStart />
       <Footer /> */}
-      <Insight />
+      <ContactUs />
     </div>
   );
 }

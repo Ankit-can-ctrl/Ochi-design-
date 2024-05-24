@@ -60,7 +60,7 @@ function Insight() {
         <Marquee text="instagram" />
         <PublicationCards />
       </div>
-      <div className=" rounded-t-2xl overflow-hidden">
+      <div className=" rounded-t-2xl overflow-hidden1">
         <Footer />
       </div>
     </div>

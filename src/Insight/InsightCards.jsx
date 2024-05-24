@@ -71,7 +71,7 @@ function InsightCards() {
       {cardsData.map((item, index) => (
         <div
           key={index}
-          className="card py-10 px-4 m-5 rounded-lg md:px-10 bg-slate-200 font-Neue flex flex-col max-w-[500px] gap-4"
+          className="card cursor-pointer py-10 px-4 m-5 rounded-lg md:px-10 bg-slate-200 font-Neue flex flex-col max-w-[500px] gap-4"
         >
           <div className="relative overflow-hidden rounded-2xl ">
             <motion.img
