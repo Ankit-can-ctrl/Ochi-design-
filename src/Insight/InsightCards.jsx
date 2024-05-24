@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import image1 from "../img/posts/1.jpg";
+import image2 from "../img/posts/2.jpg";
+import image3 from "../img/posts/3.jpg";
+import image4 from "../img/posts/4.jpg";
+import image5 from "../img/posts/5.jpg";
+import image6 from "../img/posts/6.jpg";
 const cardsData = [
   {
     tags: ["public speaking", "storytelling"],
@@ -7,8 +13,7 @@ const cardsData = [
     Date: "26 May 23",
     title:
       " Presenting to an International Audience: Tips and Lessons Learned.",
-    image:
-      "https://ochi.design/wp-content/uploads/2023/11/Frame-4126-1-324x394.png",
+    image: image6,
   },
   {
     tags: ["public speaking", "storytelling"],
@@ -16,8 +21,7 @@ const cardsData = [
     Date: "26 May 23",
     title:
       " Presenting to an International Audience: Tips and Lessons Learned.",
-    image:
-      "https://ochi.design/wp-content/uploads/2023/11/Frame-4126-1-324x394.png",
+    image: image1,
   },
   {
     tags: ["public speaking", "storytelling"],
@@ -25,8 +29,7 @@ const cardsData = [
     Date: "26 May 23",
     title:
       " Presenting to an International Audience: Tips and Lessons Learned.",
-    image:
-      "https://ochi.design/wp-content/uploads/2023/11/Frame-4126-1-324x394.png",
+    image: image2,
   },
   {
     tags: ["public speaking", "storytelling"],
@@ -34,8 +37,7 @@ const cardsData = [
     Date: "26 May 23",
     title:
       " Presenting to an International Audience: Tips and Lessons Learned.",
-    image:
-      "https://ochi.design/wp-content/uploads/2023/11/Frame-4126-1-324x394.png",
+    image: image3,
   },
   {
     tags: ["public speaking", "storytelling"],
@@ -43,8 +45,15 @@ const cardsData = [
     Date: "26 May 23",
     title:
       " Presenting to an International Audience: Tips and Lessons Learned.",
-    image:
-      "https://ochi.design/wp-content/uploads/2023/11/Frame-4126-1-324x394.png",
+    image: image4,
+  },
+  {
+    tags: ["public speaking", "storytelling"],
+    name: "Ihor Huly",
+    Date: "26 May 23",
+    title:
+      " Presenting to an International Audience: Tips and Lessons Learned.",
+    image: image5,
   },
 ];
 
@@ -58,7 +67,7 @@ function InsightCards() {
   }
 
   return (
-    <div className=" bg-slate-400 w-fit  mx-4 md:mx-10 rounded-xl text-black flex flex-col md:flex-row flex-wrap justify-center gap-5">
+    <div className=" bg-slate-400 w-fit  mx-4 md:mx-20 rounded-xl text-black flex flex-col md:flex-row flex-wrap py-10 justify-center gap-5">
       {cardsData.map((item, index) => (
         <div
           key={index}
@@ -72,7 +81,7 @@ function InsightCards() {
               onMouseOut={() => handleMouseLeave()}
               transition={{ duration: 0.5 }}
               className=" w-full rounded-2xlcursor-pointer hover:scale-125"
-              src="https://ochi.design/wp-content/uploads/2023/11/Frame-4126-1-324x394.png"
+              src={item.image}
               alt="work"
             />
             <motion.div
@@ -87,7 +96,7 @@ function InsightCards() {
               {item.tags.map((item, index) => (
                 <div
                   key={index}
-                  className="post-tag  uppercase text-white border-2 rounded-full mt-5 mx-3 px-2 py-1 text-xs  font-semibold"
+                  className="post-tag  uppercase text-black border-2 border-black rounded-full mt-5 mx-3 px-2 py-1 text-xs  font-semibold"
                 >
                   {item}
                 </div>
