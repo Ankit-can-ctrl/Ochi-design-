@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import Navigation from "../components/navigation bar/Navigation";
 import { useEffect, useRef, useState } from "react";
 import InsightCards from "./InsightCards";
+import Marquee from "../components/Marquee";
+import PublicationCards from "../work/PublicationCards";
+import Footer from "../components/Footer";
+
 const latestInsights = [
   "All",
   "presentation template",
@@ -27,7 +31,7 @@ function Insight() {
           Insights
         </h1>
       </div>
-      <div className="latest-insights">
+      <div className="latest-insights my-10">
         <div className="insights py-14 flex flex-col gap-5">
           <h1 className=" font-Neue px-10 font-semibold">Latest Insights:</h1>
           <motion.div
@@ -51,6 +55,13 @@ function Insight() {
           </motion.div>
         </div>
         <InsightCards />
+      </div>
+      <div className="marquee">
+        <Marquee text="instagram" />
+        <PublicationCards />
+      </div>
+      <div className=" rounded-t-2xl overflow-hidden">
+        <Footer />
       </div>
     </div>
   );

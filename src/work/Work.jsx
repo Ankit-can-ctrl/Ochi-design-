@@ -6,24 +6,7 @@ import { motion } from "framer-motion";
 import ReadyToStart from "../components/ReadyToStart";
 import Footer from "../components/Footer";
 import Navigation from "../components/navigation bar/Navigation";
-
-const publicationData = [
-  {
-    name: "OfficeVibe PPT Template",
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/Frame-3878-325x325.jpg",
-  },
-  {
-    name: "OfficeVibe PPT Template",
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/Frame-3878-325x325.jpg",
-  },
-  {
-    name: "OfficeVibe PPT Template",
-    image:
-      "https://ochi.design/wp-content/uploads/2022/05/Frame-3878-325x325.jpg",
-  },
-];
+import PublicationCards from "./PublicationCards";
 
 function Work() {
   const [rotate, setRotate] = useState(0);
@@ -87,50 +70,9 @@ function Work() {
         </div>
       </div>
       <div className="work-marquee">
-        <Marquee />
+        <Marquee text="Hire Me!" />
         <div className="publication-cards text-white  bg-[#004D43]">
-          <div className=" py-10 px-5 flex flex-col gap-10 ">
-            <h1 className=" font-Neue font-semibold text-2xl ">
-              Latest Publications:
-            </h1>
-            <div className="flex flex-col md:flex-row gap-5 items-center justify-center">
-              {" "}
-              {publicationData.map((item, index) => (
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                  key={index}
-                  className="cards flex flex-col gap-4 "
-                >
-                  <div className="card overflow-hidden">
-                    <img
-                      className="rounded-2xl "
-                      src={item.image}
-                      alt="cards"
-                    />
-                  </div>
-                  <div className="name px-2 flex items-center justify-start gap-5">
-                    <span>
-                      <svg
-                        color="white"
-                        stroke="currentColor"
-                        fill="currentColor"
-                        viewBox="0 0 8 16"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"></path>
-                      </svg>
-                    </span>
-                    <h1 className=" font-Neue text-md font-semibold">
-                      {item.name}
-                    </h1>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          <PublicationCards />
         </div>
       </div>
       <div className=" bg-[#004D43]">

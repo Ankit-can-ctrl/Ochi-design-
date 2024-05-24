@@ -7,13 +7,13 @@ function Marquee({ text }) {
       // data-scroll-speed=".3"
       className=" bg-zinc-900 text-white"
     >
-      <div className="w-full py-[3vh] h-fit md:h-fit rounded-t-3xl bg-[#004D43]">
-        <div className="text border-t-2 border-b-2 border-zinc-200 flex  overflow-hidden whitespace-nowrap">
+      <div className="w-full py-20 h-fit rounded-t-3xl bg-[#004D43]">
+        <div className="text border-t-2 border-b-2 border-zinc-200 flex items-center justify-center overflow-hidden whitespace-nowrap">
           <motion.h1
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-            className=" font-semibold text-[70vw] md:text-[20vw] leading-none font-Founder pr-20 uppercase"
+            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
           >
             {text}
           </motion.h1>
@@ -21,7 +21,31 @@ function Marquee({ text }) {
             initial={{ x: "0" }}
             animate={{ x: "-100%" }}
             transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
-            className=" font-semibold text-[70vw] md:text-[20vw] leading-none font-Founder pr-20 uppercase mb-7"
+            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+          >
+            {text}
+          </motion.h1>
+          <motion.h1
+            initial={{ x: "0" }}
+            animate={{ x: "-100%" }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
+            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+          >
+            {text}
+          </motion.h1>
+          <motion.h1
+            initial={{ x: "0" }}
+            animate={{ x: "-100%" }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
+            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
+          >
+            {text}
+          </motion.h1>
+          <motion.h1
+            initial={{ x: "0" }}
+            animate={{ x: "-100%" }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
+            className=" font-semibold text-[70vw] md:text-[20vw] leading-none align-middle font-Founder pr-28 uppercase"
           >
             {text}
           </motion.h1>
