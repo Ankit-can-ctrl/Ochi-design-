@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import Navigation from "../components/navigation bar/Navigation";
 import Form from "./Form";
 
@@ -70,6 +70,87 @@ function ContactUs() {
           <button className=" border-2 rounded-full px-3 py-2 hover:bg-white hover:text-black">
             Send Inquiry
           </button>
+        </div>
+      </div>
+      <div className="social-links flex flex-col  text-black font-Founder bg-[#CDEA68] overflow-hidden leading-none rounded-t-2xl py-14">
+        <motion.div
+          animate={{ x: ["-100%", 0, "100%"] }}
+          transition={{ duration: 4, repeat: Infinity, ease: easeInOut }}
+          className=" text-center w-full text-8xl font-extrabold"
+        >
+          Say Hello!
+        </motion.div>
+        <div className="links w-full border-b-2 border-zinc-800 py-20">
+          <motion.div
+            animate={{
+              y: [0, -30, 0],
+            }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="text-center relative overflow-hidden"
+          >
+            <a
+              href="#"
+              className="uppercase text-center text-[110px] font-extrabold tracking-tight md:text-[150px] lg:text-[180px]"
+            >
+              Instagram
+            </a>
+          </motion.div>
+
+          <motion.div
+            animate={{
+              y: [0, -30, 0],
+            }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center justify-center text-center md:flex-row md:gap-20"
+          >
+            <a
+              href="#"
+              className="uppercase text-center text-[110px] font-extrabold tracking-tight md:text-[150px] lg:text-[180px]"
+            >
+              Github
+            </a>
+            <a
+              href="#"
+              className="uppercase text-center text-[110px] font-extrabold tracking-tight md:text-[150px] lg:text-[180px]"
+            >
+              Facebook
+            </a>
+          </motion.div>
+          <motion.div
+            animate={{
+              y: [0, -55, 0],
+            }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className=" text-center"
+          >
+            <a
+              href="#"
+              className="uppercase text-center text-[110px] font-extrabold tracking-tight md:text-[150px] lg:text-[180px]"
+            >
+              Linkedin
+            </a>
+          </motion.div>
+        </div>
+        <div className="ContactLinks flex flex-col md:flex-row md:items-start md:text-xl md:justify-between px-10 gap-10 font-Neue font-semibold py-10 ">
+          <h1>Our Contact:</h1>
+          <div className="flex flex-col md:flex-row justify-center gap-20">
+            <div className="flex flex-col gap-10">
+              <h1>L:</h1>
+              <div className="flex flex-col gap-4 justify-end">
+                <a href="#">
+                  202-1965 W 4th Ave
+                  <br /> Vacouver,Canada
+                </a>
+                <a href="#">
+                  202-1965 W 4th Ave
+                  <br /> Vacouver,Canada
+                </a>
+              </div>
+            </div>
+            <button className="email border-2 w-fit h-fit rounded-full border-black px-4 py-3 hover:text-[#CDEA68] hover:bg-black">
+              ak537664@gmail.com
+            </button>
+          </div>
         </div>
       </div>
     </div>

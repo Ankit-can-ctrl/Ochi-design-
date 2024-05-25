@@ -32,7 +32,7 @@ function App() {
   // ***using this here will smoothen the scroll of entire application
   // className="w-full text-white bg-zinc-900" use for main div for all components
   return (
-    <div className="text-white">
+    <div className="text-white bg-black">
       {/* <Navigation />
       <HomeLandingPage />
       <Marquee text={"we are ochi"} />
@@ -44,6 +44,7 @@ function App() {
       <ReadyToStart />
       <Footer /> */}
       <ContactUs />
+      {/* <NewTest text="hello" /> */}
     </div>
   );
 }

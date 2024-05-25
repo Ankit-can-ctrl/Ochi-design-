@@ -1,25 +1,20 @@
 import { motion } from "framer-motion";
 
-function NewTest() {
+function NewTest({ text }) {
   return (
-    <div className="overflow-hidden whitespace-nowrap relative w-full">
+    <div className="flex justify-center items-center h-screen">
       <motion.div
-        className="inline-block will-change-transform"
-        animate={{ x: ["0%", "-100%"] }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "linear",
-          duration: 10, // Adjust duration for speed
+        className="relative text-4xl font-bold"
+        animate={{
+          y: [0, -20, 0], // The vertical movement sequence
         }}
-        style={{ display: "flex" }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
       >
-        <div className="flex-shrink-0 px-10">
-          Your scrolling text goes here. Your scrolling text goes here.
-        </div>
-        <div className="flex-shrink-0 px-10">
-          Your scrolling text goes here. Your scrolling text goes here.
-        </div>
+        {text}
       </motion.div>
     </div>
   );
