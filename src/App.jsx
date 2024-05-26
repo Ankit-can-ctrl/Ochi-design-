@@ -44,7 +44,7 @@ function App() {
       <ReadyToStart />
       <Footer /> */}
       <ContactUs />
-      {/* <NewTest text="hello" /> */}
+      {/* <NewTest /> */}
     </div>
   );
 }

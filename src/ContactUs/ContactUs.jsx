@@ -1,6 +1,42 @@
 import { easeInOut, motion } from "framer-motion";
 import Navigation from "../components/navigation bar/Navigation";
 import Form from "./Form";
+import Question from "./Question";
+import Footer from "../components/Footer";
+const dataArray = [
+  {
+    Question: "What unique skills or qualities can you bring to our team?",
+    answer:
+      "I bring a unique blend of technical skills and a creative mindset, enhancing user experience through visually appealing designs.",
+  },
+  {
+    Question: "How do you approach learning new skills or technologies?",
+    answer:
+      "I take online courses, read documentation, and practice through projects.",
+  },
+  {
+    Question: " What makes you the best candidate for this position?",
+    answer:
+      "I have a solid foundation in front-end technologies, practical experience with React, and a passion for continuous learning.",
+  },
+  {
+    Question:
+      "How do your skills and experiences align with the requirements of this role?",
+    answer:
+      "My skills in C++,Python, HTML, CSS,Tailwind, JavaScript, and React, along with my Projects, align perfectly with the role’s requirements.",
+  },
+  {
+    Question: "What can you offer us that someone else cannot?",
+    answer:
+      "My dedication to continuous improvement and rapid adaptation to new technologies set me apart from others",
+  },
+  {
+    Question:
+      " Why do you want to work for our company, and how will you add value?",
+    answer:
+      "My commitment to innovation aligns with my career goals, and my proactive approach and technical skills will add significant value.",
+  },
+];
 
 function ContactUs() {
   return (
@@ -72,7 +108,7 @@ function ContactUs() {
           </button>
         </div>
       </div>
-      <div className="social-links flex flex-col  text-black font-Founder bg-[#CDEA68] overflow-hidden leading-none rounded-t-2xl py-14">
+      <div className="social-links flex flex-col  text-black font-Founder bg-[#CDEA68] overflow-hidden leading-none rounded-2xl py-14">
         <motion.div
           animate={{ x: ["-100%", 0, "100%"] }}
           transition={{ duration: 4, repeat: Infinity, ease: easeInOut }}
@@ -152,6 +188,23 @@ function ContactUs() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="questions py-20 font-Neue">
+        <h1 className=" font-bold px-10 text-3xl md:text-6xl">
+          A few things you may want to ask me:
+        </h1>
+        <div>
+          {dataArray.map((item, index) => (
+            <Question
+              key={{ index }}
+              question={item.Question}
+              answer={item.answer}
+            />
+          ))}
+        </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
