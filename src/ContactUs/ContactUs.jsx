@@ -193,17 +193,17 @@ function ContactUs() {
         <h1 className=" font-bold px-10 text-3xl md:text-6xl">
           A few things you may want to ask me:
         </h1>
-        <div>
+        <div className=" overflow-hidden">
           {dataArray.map((item, index) => (
             <Question
-              key={{ index }}
+              key={index}
               question={item.Question}
               answer={item.answer}
             />
           ))}
         </div>
       </div>
-      <div>
+      <div className=" rounded-t-xl overflow-hidden">
         <Footer />
       </div>
     </div>
