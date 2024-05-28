@@ -1,0 +1,31 @@
+import Navigation from "../components/navigation bar/Navigation";
+import HomeLandingPage from "../components/HomeLandingPage";
+import Marquee from "../components/Marquee";
+import About from "../components/About";
+import Eyes from "../components/Eyes";
+import Featured from "../components/Featured";
+import Review from "../components/Review";
+import Cards from "../components/Cards";
+import ReadyToStart from "../components/ReadyToStart";
+import Footer from "../components/Footer";
+
+function Homepage() {
+  return (
+    <div className="Home-main-container text-white">
+      <div className=" bg-black">
+        <Navigation />
+      </div>
+      <HomeLandingPage />
+      <Marquee text={"we are ochi"} />
+      <About />
+      <Eyes />
+      <Featured />
+      <Review />
+      <Cards />
+      <ReadyToStart />
+      <Footer />
+    </div>
+  );
+}
+
+export default Homepage;

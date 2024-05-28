@@ -90,7 +90,7 @@ function Navigation() {
                 whileHover={{ scale: 1.2 }}
                 transition={{ duration: 0.5 }}
                 className={`capitalize text-2xl leading-none  ${
-                  index === pagesLink.length - 1 ? " pl-52" : ""
+                  index === pagesLink.length - 1 ? " ml-52" : ""
                 }`}
                 key={index}
                 href="#"
