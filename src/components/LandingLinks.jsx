@@ -1,21 +1,21 @@
 function LandingLinks() {
   return (
-    <div className="border-t-[1px] border-zinc-600 bg-black text-white flex flex-col lg:flex-row gap-10 items-start lg:items-center lg:justify-between lg:px-20 py-20 pl-5">
+    <div className="border-t-[1px] border-zinc-600 bg-black text-white  flex flex-col lg:flex-row gap-10 items-start lg:items-center lg:justify-between lg:px-20 py-20 pl-5">
       {["For public and private companies", "From the first pitch to IPO"].map(
         (item, index) => (
           <p
             key={index}
-            className=" font-Founder text-xl font-light tracking-tight leading-none"
+            className=" font-Founder text-xl tracking-tight leading-none"
           >
             {item}
           </p>
         )
       )}
       <div className="button flex items-center gap-5">
-        <button className="uppercase border-[1px] border-zinc-400 font-light rounded-full px-4 py-3 ">
+        <button className="uppercase hover:scale-110 transition-all hover:text-black hover:bg-white border-[5px]  font-semibold rounded-full px-4 py-3 ">
           Start the project
         </button>
-        <button className="arrow flex items-center justify-center border-[1px] rounded-full h-12 w-12">
+        <button className="arrow hover:scale-110 transition-all hover:text-black hover:bg-white flex items-center justify-center border-[5px] rounded-full h-12 w-12">
           <svg
             stroke="currentColor"
             fill="currentColor"

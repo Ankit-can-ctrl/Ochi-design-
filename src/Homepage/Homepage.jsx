@@ -18,7 +18,9 @@ function Homepage() {
       <HomeLandingPage />
       <Marquee text={"we are ochi"} />
       <About />
-      <Eyes />
+      <div className="hidden md:block">
+        <Eyes />
+      </div>
       <Featured />
       <Review />
       <Cards />

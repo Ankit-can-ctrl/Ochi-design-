@@ -16,13 +16,13 @@ function LandingPage({ mainHeading }) {
                     initial={{ width: 0 }}
                     animate={isMobile ? { width: "5rem" } : { width: "9rem" }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                    className=" h-[50px] w-[90px] sm:h-[60px] md:w-[100px] xl:h-[100px] rounded-lg relative top-2 "
+                    className=" h-[50px] w-[90px] sm:h-[60px] md:w-[100px] xl:h-[100px] rounded-lg relative "
                     src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
                     alt="ochi image"
                   />
                 )}
 
-                <h1 className=" text-[2.9rem] md:text-[5.5rem] sm:text-[3.5rem] xl:text-[8rem] tracking-tighter font-semibold leading-[1.5] xl:leading-[1] uppercase font-Founder ">
+                <h1 className=" text-[4rem] md:pt-5 md:text-[5.5rem] sm:text-[3.5rem] xl:text-[8rem] tracking-tight font-semibold leading-[1.5] xl:leading-[1] uppercase font-Founder ">
                   {item}
                 </h1>
               </div>

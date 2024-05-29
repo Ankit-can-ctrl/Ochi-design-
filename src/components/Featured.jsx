@@ -52,11 +52,7 @@ function Featured() {
                 {item.name}
               </span>
             </div>
-            <div
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-              className="project-img relative"
-            >
+            <div className="project-img  flex items-center justify-center">
               <motion.img
                 whileTap={{
                   scale: 0.95,
@@ -70,14 +66,7 @@ function Featured() {
                 src={item.img}
                 alt="project image"
               />
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={isHovering ? { opacity: 1 } : { opacity: 0 }}
-                whileHover={isHovering ? { opacity: 1 } : { opacity: 0 }}
-                whileTap={isHovering ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="uppercase text-[#CDEA68] md:text-6xl text-4xl top-[50%] left-[30%] md:left-[40%] xl:top-1/2 xl:left-[16vw]  font-Founder font-bold tracking-tighter absolute"
-              >
+              <motion.h1 className="uppercase text-[#CDEA68] font-Founder font-bold tracking-tighter absolute">
                 {item.name}
               </motion.h1>
             </div>
