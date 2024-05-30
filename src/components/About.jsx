@@ -3,7 +3,7 @@ import playback720 from "../img/about720.mp4";
 
 function About() {
   return (
-    <div className="  bg-[#fdfdfd]">
+    <div className="  bg-[#f6751f]">
       <div
         // data-scroll
         // data-scroll-section

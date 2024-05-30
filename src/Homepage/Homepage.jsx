@@ -24,7 +24,9 @@ function Homepage() {
       <Featured />
       <Review />
       <Cards />
-      <ReadyToStart />
+      <div className=" bg-black">
+        <ReadyToStart />
+      </div>
       <Footer />
     </div>
   );

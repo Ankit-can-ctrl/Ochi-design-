@@ -1,14 +1,41 @@
-import { easeInOut, motion } from "framer-motion";
+import {
+  easeInOut,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { useState } from "react";
 const pagesLink = ["services", "our work", "about", "insights", "contact me"];
 
 function Navigation() {
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { scrollY } = useScroll(); //motion component which tracks scroll
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious(); //to keep track of prev value as well
+    if (latest > previous && latest > 150) {
+      //latest > 150 means it should work if scroll is beyond 150
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   function handleMenuOpen() {
     setMenuOpen(!menuOpen);
   }
   return (
-    <div className=" bg-black rounded-b-2xl overflow-hidden">
+    <motion.div
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className=" bg-black fixed w-full top-0 z-50 rounded-b-2xl overflow-hidden"
+    >
       <div className="bg-black text-white font-Founder px-10 py-8">
         <div className=" w-full flex items-center justify-between">
           <div className="logo">
@@ -122,7 +149,7 @@ function Navigation() {
           ))}
         </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
