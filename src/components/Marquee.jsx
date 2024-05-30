@@ -7,7 +7,7 @@ function Marquee({ text }) {
       // data-scroll-speed=".3"
       className=" bg-zinc-900 text-white"
     >
-      <div className="w-full py-20 h-fit rounded-t-3xl bg-[#004D43]">
+      <div className="w-full py-20 h-fit rounded-t-3xl bg-[#077a31]">
         <div className="text border-t-2 border-b-2 border-zinc-200 flex items-center justify-center overflow-hidden whitespace-nowrap">
           <motion.h1
             initial={{ x: "0" }}

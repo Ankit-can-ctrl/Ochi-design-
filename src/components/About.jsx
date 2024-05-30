@@ -8,7 +8,7 @@ function About() {
         // data-scroll
         // data-scroll-section
         // data-scroll-speed=".2"
-        className="w-full rounded-t-3xl font-Neue text-black bg-[#d5f269] pb-10"
+        className="w-full rounded-t-3xl font-Neue text-black bg-[#adeb51] pb-10"
       >
         <div className="about-top w-full">
           <h1 className=" text-3xl md:text-5xl font-semibold py-20 pl-10 text-left md:pr-[30%]">
