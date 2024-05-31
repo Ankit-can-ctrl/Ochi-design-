@@ -14,7 +14,7 @@ function Loader() {
   }, [count]);
   return (
     <div className="main-container relative w-full h-screen overflow-hidden bg-black flex items-center justify-center font-Founder">
-      <div className="Loader_page z-10 bg-white py-10 px-5 md:p-10 h-3/4 w-3/4 md:w-3/4 rounded-2xl">
+      <div className="Loader_page z-10 bg-white py-10 px-6 md:p-10 h-3/4 w-3/4 md:w-3/4 rounded-2xl">
         <div className="Loader flex flex-col justify-between h-full items-start ">
           <div className="loader-header flex flex-col gap-20">
             <svg
@@ -61,13 +61,13 @@ function Loader() {
       <motion.div
         initial={{ x: "-15%" }}
         animate={{ x: "3%" }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         className="Animated-page z-[9] rounded-2xl absolute h-[70%] w-3/4 bg-zinc-200"
       ></motion.div>
       <motion.div
         initial={{ x: "-15%" }}
         animate={{ x: "7%" }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
         className="Animated-page rounded-2xl  absolute h-[60%] z-[7] w-3/4 bg-zinc-500"
       ></motion.div>
       <motion.div

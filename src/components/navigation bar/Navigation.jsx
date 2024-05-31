@@ -146,18 +146,21 @@ function Navigation() {
           transition={{ duration: 0.1, ease: easeInOut }}
           className="nav-menu-open origin-top text-white font-Founder flex flex-col items-end gap-5 px-10 font-semibold text-6xl py-10 bg-black"
         >
-          {pagesLink.map((item, index) => (
-            <motion.a
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3, ease: easeInOut }}
-              className=" capitalize"
-              key={index}
-              href="#"
-            >
-              {item}
-            </motion.a>
-          ))}
+          <Link className="services-link" to="/Services">
+            <NavigationLinks link="Services" />
+          </Link>
+          <Link className="Work-link" to="/Work">
+            <NavigationLinks link="Work" />
+          </Link>
+          <Link className="About-link" to="/About">
+            <NavigationLinks link="About" />
+          </Link>
+          <Link className="Insights-link" to="/Insights">
+            <NavigationLinks link="Insights" />
+          </Link>
+          <Link className="Contact-link" to="/Contact">
+            <NavigationLinks link="Contact" />
+          </Link>
         </motion.div>
       )}
     </motion.div>
