@@ -22,7 +22,7 @@ function Insight() {
   }, []);
 
   return (
-    <div className="main-container bg-black">
+    <div className="main-container text-white bg-black">
       <div>
         <Navigation />
       </div>

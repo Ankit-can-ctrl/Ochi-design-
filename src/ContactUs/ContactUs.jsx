@@ -40,11 +40,11 @@ const dataArray = [
 
 function ContactUs() {
   return (
-    <div className="bg-black">
+    <div className="bg-black text-white">
       <div>
         <Navigation />
       </div>
-      <div className="Contact-landing py-20 px-5 md:px-10 font-Founder flex flex-col gap-1 items-start justify-center">
+      <div className="Contact-landing py-28 px-5 md:px-10 font-Founder flex flex-col gap-1 items-start justify-center">
         <div className="flex items-center justify-center gap-5">
           <motion.img
             initial={{ width: 0 }}

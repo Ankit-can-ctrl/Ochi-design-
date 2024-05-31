@@ -116,9 +116,9 @@ function Services() {
   }
 
   return (
-    <div className="text-white font-Neue">
+    <div className="text-white bg-black font-Neue">
       <Navigation />
-      <div className="landing-page w-full text-white font">
+      <div className="landing-page w-full text-white bg-black font">
         <div className=" md:text-6xl xl:text-8xl heading uppercase px-10 py-20 xl:py-28 font-Founder text-5xl font-semibold tracking-tighter border-b-2 border-zinc-600">
           Services
         </div>
@@ -159,7 +159,7 @@ function Services() {
           </div>
         </div>
       </div>
-      <div className="holistic-process">
+      <div className="holistic-process ">
         <div className=" border-b-2 border-zinc-600 py-10">
           <h1 className="text-4xl font-semibold px-10 md:text-6xl">
             Holistic process:
@@ -297,7 +297,7 @@ function Services() {
       <div>
         <Marquee text={"i'm the one yeah"} />
       </div>
-      <div className="detail-cards bg-[#004D43] py-10 flex flex-col px-5 gap-10 md:grid md:grid-cols-2">
+      <div className="detail-cards bg-black py-10 flex flex-col px-5 gap-10 md:grid md:grid-cols-2">
         <h1 className=" font-semibold md:text-4xl xl:text-6xl">
           What can you expect
         </h1>
@@ -305,7 +305,7 @@ function Services() {
           {greenCards.map((item, index) => (
             <div
               key={index}
-              className="card min-h-[250px]  bg-[#3b7b72] rounded-xl p-5 flex flex-col items-start gap-28 justify-between"
+              className="card min-h-[250px]  bg-[#f6751f] rounded-xl p-5 flex flex-col items-start gap-28 justify-between"
             >
               <h1 className=" text-6xl font-semibold">
                 {index <= 9 ? "0" : ""}
@@ -346,7 +346,7 @@ function Services() {
           ))}
         </div>
       </div>
-      <div className=" bg-[#004D43] ">
+      <div className=" bg-black ">
         <ReadyToStart />
       </div>
       <div>
