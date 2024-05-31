@@ -1,6 +1,6 @@
 function ReadyToStart() {
   return (
-    <div className="w-full bg-[#f6751f] h-fit rounded-t-xl py-32">
+    <div className="w-full bg-[#D5F269] h-fit rounded-t-xl py-32">
       <div className="title uppercase text-black text-center text-[3.2rem] md:text-8xl xl:text-[200px] font-Founder font-bold tracking-tight leading-none w-full h-fit">
         <h1 className="">ready</h1>
         <h1 className="">to start</h1>

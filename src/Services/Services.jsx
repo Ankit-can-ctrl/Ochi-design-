@@ -116,7 +116,12 @@ function Services() {
   }
 
   return (
-    <div className="text-white bg-black font-Neue">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="text-white bg-black font-Neue"
+    >
       <Navigation />
       <div className="landing-page w-full text-white bg-black font">
         <div className=" md:text-6xl xl:text-8xl heading uppercase px-10 py-20 xl:py-28 font-Founder text-5xl font-semibold tracking-tighter border-b-2 border-zinc-600">
@@ -349,10 +354,10 @@ function Services() {
       <div className=" bg-black ">
         <ReadyToStart />
       </div>
-      <div>
+      <div className=" bg-[#D5F269]">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

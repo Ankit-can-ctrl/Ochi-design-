@@ -71,16 +71,16 @@ function Work() {
       </div>
       <div className="work-marquee">
         <Marquee text="Hire Me!" />
-        <div className="publication-cards text-white  bg-[#004D43]">
+        <div className="publication-cards text-black bg-orange-500">
           <PublicationCards />
         </div>
       </div>
-      <div className=" bg-[#004D43]">
-        <div className=" rounded-t-3xl overflow-hidden">
+      <div className=" bg-[#D5F269]">
+        <div className=" bg-orange-500 overflow-hidden">
           <ReadyToStart />
         </div>
       </div>
-      <div>
+      <div className=" bg-[#d5f269]">
         <Footer />
       </div>
     </div>

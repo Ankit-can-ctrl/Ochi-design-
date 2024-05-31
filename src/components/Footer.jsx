@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="bg-white w-full px-10 py-20">
+    <div className="bg-white w-full rounded-t-2xl px-10 py-10">
       <div className="footer-top text-black flex flex-col md:grid md:grid-cols-2">
         <div className=" font-Founder text-[2.5rem] md:text-6xl xl:text-8xl leading-none tracking-tighter font-bold">
           <h1 className="uppercase ">eye-</h1>

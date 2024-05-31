@@ -27,7 +27,9 @@ function Homepage() {
       <div className=" bg-black">
         <ReadyToStart />
       </div>
-      <Footer />
+      <div className=" bg-[#D5F269]">
+        <Footer />
+      </div>
     </div>
   );
 }

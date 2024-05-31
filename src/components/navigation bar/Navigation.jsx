@@ -144,7 +144,7 @@ function Navigation() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.1, ease: easeInOut }}
-          className="nav-menu-open origin-top text-white font-Founder flex flex-col items-end gap-5 px-10 font-semibold text-6xl py-10 bg-black"
+          className="nav-menu-open origin-top text-white font-Founder flex flex-col items-end gap-5 px-10 font-semibold py-10 bg-black"
         >
           <Link className="services-link" to="/Services">
             <NavigationLinks link="Services" />

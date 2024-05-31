@@ -25,7 +25,7 @@ function PublicationCards() {
   return (
     <div>
       <div className=" py-10 px-5 flex flex-col gap-10 ">
-        <h1 className=" font-Neue px-5 font-semibold text-2xl ">
+        <h1 className=" font-Neue px-5 font-bold text-2xl ">
           Latest Publications:
         </h1>
         <div className="flex cursor-pointer flex-col md:flex-row gap-5 items-center justify-center">
@@ -43,7 +43,7 @@ function PublicationCards() {
               <div className="name px-2 flex items-center justify-start gap-5">
                 <span>
                   <svg
-                    color="white"
+                    color="black"
                     stroke="currentColor"
                     fill="currentColor"
                     viewBox="0 0 8 16"

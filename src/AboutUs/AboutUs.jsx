@@ -70,7 +70,7 @@ function AboutUs() {
       <div className=" slider bg-[#004D43]">
         <Marquee text={text} />
       </div>
-      <div className="slide-cards bg-[#004D43] ">
+      <div className="slide-cards bg-black ">
         <ImageSlider />
       </div>
       <div className="bg-[#004D43]">
@@ -124,7 +124,7 @@ function AboutUs() {
       <div>
         <ReadyToStart />
       </div>
-      <div>
+      <div className=" bg-[#D5F269]">
         <Footer />
       </div>
     </div>
