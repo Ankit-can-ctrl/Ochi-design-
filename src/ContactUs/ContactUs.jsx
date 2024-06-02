@@ -1,8 +1,10 @@
 import { easeInOut, motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import Navigation from "../components/navigation bar/Navigation";
-import Form from "./Form";
+
 import Question from "./Question";
 import Footer from "../components/Footer";
+import { useRef } from "react";
 const dataArray = [
   {
     Question: "What unique skills or qualities can you bring to our team?",
@@ -37,8 +39,27 @@ const dataArray = [
       "My commitment to innovation aligns with my career goals, and my proactive approach and technical skills will add significant value.",
   },
 ];
-
 function ContactUs() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_9qwy7bd", "template_eosvhfn", form.current, {
+        publicKey: "AiyUTa6FuJuz9opm6",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          alert("Message sent");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <div className="bg-black text-white">
       <div>
@@ -62,7 +83,45 @@ function ContactUs() {
           A project together
         </h1>
       </div>
-      <div className="form font-Neue py-20 px-10 flex flex-col gap-20">
+      <div className="contact-form font-Neue px-10 flex flex-col gap-10 py-20 h-2/4 w-full">
+        <div>
+          <h1 className=" text-2xl font-semibold md:text-6xl">
+            Send me an Email :
+          </h1>
+        </div>
+        <form
+          ref={form}
+          className=" w-[60%] overflow-hidden font-Neue flex flex-col gap-5"
+          onSubmit={sendEmail}
+        >
+          <label className=" font-bold">Name :</label>
+          <input
+            placeholder="Enter your name here..."
+            className=" rounded-md px-2 py-2 text-black border-none outline-none"
+            type="text"
+            name="user_name"
+          />
+          <label className=" font-bold">Email :</label>
+          <input
+            placeholder="Enter your Email here..."
+            className=" rounded-md px-2 py-2 text-black border-none outline-none"
+            type="email"
+            name="user_email"
+          />
+          <label className=" font-bold">Message :</label>
+          <textarea
+            placeholder="Enter your message here..."
+            className=" rounded-xl text-black border-none outline-none p-3 "
+            name="message"
+          />
+          <input
+            className=" rounded-lg border-2 py-2 cursor-pointer hover:bg-white hover:text-black transition-all font-semibold"
+            type="submit"
+            value="Send"
+          />
+        </form>
+      </div>
+      {/* <div className="form font-Neue py-20 px-10 flex flex-col gap-20">
         <h2 className="text-xl">Fill the form below:</h2>
         <form className="">
           <Form
@@ -107,7 +166,7 @@ function ContactUs() {
             Send Inquiry
           </button>
         </div>
-      </div>
+      </div> */}
       <div className="social-links flex flex-col  text-black font-Founder bg-[#CDEA68] overflow-hidden leading-none rounded-2xl py-14">
         <motion.div
           animate={{ x: ["-100%", 0, "100%"] }}

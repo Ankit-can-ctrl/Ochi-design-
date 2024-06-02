@@ -10,7 +10,6 @@ import Contact from "./ContactUs/ContactUs";
 import ScrollToTop from "./ScrollToTop";
 import Loader from "./components/Loader";
 import { useEffect, useState } from "react";
-import Test from "./Test";
 
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
@@ -33,22 +32,22 @@ function App() {
   }, []);
 
   // className="w-full text-white bg-zinc-900" use for main div for all components
-  return isLoading ? (
-    <Loader />
-  ) : (
-    <div className=" bg-black pt-[50px]">
-      <Routes location={location} key={location.pathname}>
-        <Route index element={<Homepage />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Work" element={<OurWork />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Insights" element={<Insight />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
-    </div>
-  );
+  // return isLoading ? (
+  //   <Loader />
+  // ) : (
+  //   <div className=" bg-black pt-[50px]">
+  //     <Routes location={location} key={location.pathname}>
+  //       <Route index element={<Homepage />} />
+  //       <Route path="/Services" element={<Services />} />
+  //       <Route path="/Work" element={<OurWork />} />
+  //       <Route path="/About" element={<About />} />
+  //       <Route path="/Insights" element={<Insight />} />
+  //       <Route path="/Contact" element={<Contact />} />
+  //     </Routes>
+  //   </div>
+  // );
 
-  // return <Test />;
+  return <Contact />;
 }
 
 export default App;
