@@ -124,7 +124,7 @@ function Services() {
       className="text-white absolute w-full h-full top-0 left-0 bg-black font-Neue"
     >
       <Navigation />
-      <div className="landing-page w-full text-white bg-black font">
+      <div className="landing-page pt-10 w-full text-white bg-black font">
         <div className=" md:text-6xl xl:text-8xl heading uppercase px-10 py-20 xl:py-28 font-Founder text-5xl font-semibold tracking-tighter border-b-2 border-zinc-600">
           Services
         </div>
