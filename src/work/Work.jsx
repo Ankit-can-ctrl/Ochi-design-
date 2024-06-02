@@ -23,7 +23,13 @@ function Work() {
     });
   });
   return (
-    <div className="main-work-container">
+    <motion.div
+      initial={{ y: "100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      exit={{ y: "100%" }}
+      className="main-work-container absolute w-full h-full top-0 left-0"
+    >
       <div className="work-nav">
         <Navigation />
       </div>
@@ -83,7 +89,7 @@ function Work() {
       <div className=" bg-[#d5f269]">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

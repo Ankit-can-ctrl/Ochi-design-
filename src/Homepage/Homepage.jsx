@@ -8,10 +8,16 @@ import Review from "../components/Review";
 import Cards from "../components/Cards";
 import ReadyToStart from "../components/ReadyToStart";
 import Footer from "../components/Footer";
-
+import { motion } from "framer-motion";
 function Homepage() {
   return (
-    <div className="Home-main-container text-white">
+    <motion.div
+      initial={{ y: "100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      exit={{ y: "100%" }}
+      className="Home-main-container  absolute w-full h-full top-0 left-0 text-white"
+    >
       <div className=" bg-black">
         <Navigation />
       </div>
@@ -30,7 +36,7 @@ function Homepage() {
       <div className=" bg-[#D5F269]">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

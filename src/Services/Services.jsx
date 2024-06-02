@@ -117,10 +117,11 @@ function Services() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="text-white bg-black font-Neue"
+      initial={{ y: "100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      exit={{ y: "100%" }}
+      className="text-white absolute w-full h-full top-0 left-0 bg-black font-Neue"
     >
       <Navigation />
       <div className="landing-page w-full text-white bg-black font">
@@ -164,7 +165,7 @@ function Services() {
           </div>
         </div>
       </div>
-      <div className="holistic-process ">
+      <div className="holistic-process bg-black ">
         <div className=" border-b-2 border-zinc-600 py-10">
           <h1 className="text-4xl font-semibold px-10 md:text-6xl">
             Holistic process:
@@ -176,65 +177,67 @@ function Services() {
         <HolisticProcess processArray={processArray} />
         <HolisticProcess processArray={processArray} />
       </div>
-      <div className="w-full bg-[#d5f269] rounded-t-2xl mt-10 pb-10">
-        <div className="descripton border-b-2 border-[#9cad5d] text-black font-Neue">
-          <p className="px-10 py-20 font-medium text-2xl md:text-4xl xl:text-6xl">
-            Lets be honest. There are really no excuses to have a bad
-            presentation anymore. No one has time for poorly communicated ideas.
-            Focus on what you do best — growing your business, while we do our
-            best at making your presentations awesome.
-          </p>
-        </div>
-        <div className="capabilities px-10 py-10 text-black font-Neue flex flex-col md:grid md:grid-cols-2 gap-10">
-          <div className="md:flex md:flex-col justify-between items-start">
-            <h1 className="text-2xl font-semibold md:text-4xl md:font-medium xl:text-6xl">
-              Our Capabilities:
-            </h1>
-            <div className="hidden md:block">
-              {currentImage && (
-                <motion.img
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, easings: [0.65, 0, 0.35, 1] }}
-                  exit={{ opacity: 0 }}
-                  className=" md:block h-[300px] rounded-2xl"
-                  src={currentImage}
-                  alt="tags-image"
-                />
-              )}
-            </div>
+      <div className=" bg-black pt-20">
+        <div className="w-full bg-[#d5f269] rounded-t-2xl pb-10">
+          <div className="descripton border-b-2 border-[#9cad5d] text-black font-Neue">
+            <p className="px-10 py-20 font-medium text-2xl md:text-4xl xl:text-6xl">
+              Lets be honest. There are really no excuses to have a bad
+              presentation anymore. No one has time for poorly communicated
+              ideas. Focus on what you do best — growing your business, while we
+              do our best at making your presentations awesome.
+            </p>
           </div>
-          <div className="flex flex-col md:grid md:grid-cols-2 gap-10 md:pt-20">
-            {Capabilities.map((item, index) => (
-              <div key={index} className="px-5 flex flex-col gap-5">
-                <div className="head flex items-center gap-3">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    height=".7em"
-                    width=".7rem"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="8" cy="8" r="8"></circle>
-                  </svg>
-                  <h1 className="uppercase">{item.title} :</h1>
-                </div>
-                <div className="flex flex-col gap-5">
-                  {item.tags.map((tag, tagIndex) => (
-                    <div key={tagIndex}>
-                      <button
-                        onMouseEnter={() => handleTagHover(index)}
-                        onMouseLeave={handleOnLeave}
-                        className="tag uppercase hover:text-white hover:border-white hover:bg-black w-fit border-2 border-[#96aa4b] px-4 py-2 rounded-full"
-                      >
-                        {tag}
-                      </button>
-                    </div>
-                  ))}
-                </div>
+          <div className="capabilities px-10 py-10 text-black font-Neue flex flex-col md:grid md:grid-cols-2 gap-10">
+            <div className="md:flex md:flex-col justify-between items-start">
+              <h1 className="text-2xl font-semibold md:text-4xl md:font-medium xl:text-6xl">
+                Our Capabilities:
+              </h1>
+              <div className="hidden md:block">
+                {currentImage && (
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, easings: [0.65, 0, 0.35, 1] }}
+                    exit={{ opacity: 0 }}
+                    className=" md:block h-[300px] rounded-2xl"
+                    src={currentImage}
+                    alt="tags-image"
+                  />
+                )}
               </div>
-            ))}
+            </div>
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-10 md:pt-20">
+              {Capabilities.map((item, index) => (
+                <div key={index} className="px-5 flex flex-col gap-5">
+                  <div className="head flex items-center gap-3">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                      height=".7em"
+                      width=".7rem"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="8" cy="8" r="8"></circle>
+                    </svg>
+                    <h1 className="uppercase">{item.title} :</h1>
+                  </div>
+                  <div className="flex flex-col gap-5">
+                    {item.tags.map((tag, tagIndex) => (
+                      <div key={tagIndex}>
+                        <button
+                          onMouseEnter={() => handleTagHover(index)}
+                          onMouseLeave={handleOnLeave}
+                          className="tag uppercase hover:text-white hover:border-white hover:bg-black w-fit border-2 border-[#96aa4b] px-4 py-2 rounded-full"
+                        >
+                          {tag}
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

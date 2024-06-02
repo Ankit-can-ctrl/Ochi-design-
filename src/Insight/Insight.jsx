@@ -22,7 +22,13 @@ function Insight() {
   }, []);
 
   return (
-    <div className="main-container text-white bg-black">
+    <motion.div
+      initial={{ y: "100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      exit={{ y: "100%" }}
+      className="main-container absolute w-full h-full top-0 left-0 text-white bg-black"
+    >
       <div>
         <Navigation />
       </div>
@@ -31,7 +37,7 @@ function Insight() {
           Insights
         </h1>
       </div>
-      <div className="latest-insights my-10">
+      <div className="latest-insights bg-black py-10">
         <div className="insights py-14 flex flex-col gap-5">
           <h1 className=" font-Neue px-10 font-semibold">Latest Insights:</h1>
           <motion.div
@@ -56,14 +62,14 @@ function Insight() {
         </div>
         <InsightCards />
       </div>
-      <div className="marquee">
+      <div className="marquee bg-black">
         <Marquee text="instagram" />
         <PublicationCards />
       </div>
       <div className=" rounded-t-2xl overflow-hidden1">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -7,17 +7,24 @@ import ImageSlider from "./ImageSlider";
 import DragCards from "./DragCards";
 import ReadyToStart from "../components/ReadyToStart";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 function AboutUs() {
   const text = "core of the team";
   const headingArray = ["We are", "ochi design"];
   return (
-    <div className="About-us-main-container bg-black text-white">
+    <motion.div
+      initial={{ y: "100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      exit={{ y: "100%" }}
+      className="About-us-main-container absolute w-full h-full top-0 left-0 bg-black text-white"
+    >
       <Navigation />
       <div className="landing">
         <LandingPage mainHeading={headingArray} />
       </div>
-      <div className="About-us-eyes py-20 px-10 border-t-2 border-zinc-700">
+      <div className="About-us-eyes bg-black py-20 px-10 border-t-2 border-zinc-700">
         <div className="flex flex-col font-Neue  gap-10 items-start lg:justify-center lg:grid lg:grid-cols-3">
           <h1 className="font-semibold text-3xl">About Us:</h1>
           <div className="flex flex-col gap-10 text-xl">
@@ -41,7 +48,7 @@ function AboutUs() {
         </div>
         <BaseEyes />
       </div>
-      <div className="About-us-description border-t-2 flex flex-col gap-20  border-zinc-600 py-20 px-10">
+      <div className="About-us-description bg-black border-t-2 flex flex-col gap-20  border-zinc-600 py-20 px-10">
         <div className="flex flex-col gap-28">
           <h1 className="font-Neue text-4xl font-semibold md:text-6xl md:w-[50%] hover:underline ">
             We save businesses from ugly and ineffective presentations.
@@ -127,7 +134,7 @@ function AboutUs() {
       <div className=" bg-[#D5F269]">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

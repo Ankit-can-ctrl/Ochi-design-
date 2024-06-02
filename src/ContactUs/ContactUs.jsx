@@ -61,7 +61,13 @@ function ContactUs() {
   };
 
   return (
-    <div className="bg-black text-white">
+    <motion.div
+      initial={{ y: "100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      exit={{ y: "100%" }}
+      className=" bg-black text-white absolute w-full h-full top-0 left-0"
+    >
       <div>
         <Navigation />
       </div>
@@ -83,7 +89,7 @@ function ContactUs() {
           A project together
         </h1>
       </div>
-      <div className="contact-form font-Neue px-10 flex flex-col gap-10 py-20 h-2/4 w-full">
+      <div className="contact-form font-Neue px-10 flex flex-col gap-10 py-20 bg-black w-full">
         <div>
           <h1 className=" text-2xl font-semibold md:text-6xl">
             Send me an Email :
@@ -248,7 +254,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <div className="questions py-20 font-Neue">
+      <div className="questions bg-black py-20 font-Neue">
         <h1 className=" font-bold px-10 text-3xl md:text-6xl">
           A few things you may want to ask me:
         </h1>
@@ -265,7 +271,7 @@ function ContactUs() {
       <div className=" rounded-t-xl overflow-hidden">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

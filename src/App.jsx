@@ -10,6 +10,7 @@ import Contact from "./ContactUs/ContactUs";
 import ScrollToTop from "./ScrollToTop";
 import Loader from "./components/Loader";
 import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
@@ -32,22 +33,22 @@ function App() {
   }, []);
 
   // className="w-full text-white bg-zinc-900" use for main div for all components
-  // return isLoading ? (
-  //   <Loader />
-  // ) : (
-  //   <div className=" bg-black pt-[50px]">
-  //     <Routes location={location} key={location.pathname}>
-  //       <Route index element={<Homepage />} />
-  //       <Route path="/Services" element={<Services />} />
-  //       <Route path="/Work" element={<OurWork />} />
-  //       <Route path="/About" element={<About />} />
-  //       <Route path="/Insights" element={<Insight />} />
-  //       <Route path="/Contact" element={<Contact />} />
-  //     </Routes>
-  //   </div>
-  // );
-
-  return <Contact />;
+  return isLoading ? (
+    <Loader />
+  ) : (
+    <div className=" bg-black pt-[50px] w-full h-screen">
+      <AnimatePresence initial={true}>
+        <Routes key={location.pathname} location={location}>
+          <Route index element={<Homepage />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Work" element={<OurWork />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Insights" element={<Insight />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </AnimatePresence>
+    </div>
+  );
 }
 
 export default App;
