@@ -12,6 +12,7 @@ import Loader from "./components/Loader";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
+
 // ******installing locomotive scroll from npm provide us ability to change scroll speed of each component differently*****
 
 function App() {

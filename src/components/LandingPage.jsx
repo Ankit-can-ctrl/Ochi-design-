@@ -13,6 +13,7 @@ function LandingPage({ mainHeading }) {
               <div className="flex items-center justify-start gap-2">
                 {index === 1 && (
                   <motion.img
+                    loading="lazy"
                     initial={{ width: 0 }}
                     animate={isMobile ? { width: "5rem" } : { width: "9rem" }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
